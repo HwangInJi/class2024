@@ -148,6 +148,13 @@ li {
     list-style: none;
 }
 
+/* 가운데 영역 */
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 /* 헤더 영역 */
 #header {
     text-align: center;
@@ -183,6 +190,27 @@ li {
                     padding: 10px 20px;
                     display: inline-block;
                     color: #06456e;
+                }
+            }
+        }
+    }
+}
+
+/* 메인 - 메뉴 */
+.main__menu {
+    padding: 40px 0;
+    border-bottom: 1px dashed #dcdcdc;
+
+    ul {
+        li {
+            a {
+                color: #06456e;
+                line-height: 1.7;
+                font-family: var(--fontN);
+
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-position: under;
                 }
             }
         }
