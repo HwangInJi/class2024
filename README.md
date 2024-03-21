@@ -2,6 +2,7 @@
 [메인 페이지](https://hwanginji.github.io/class2024/)   
 
 [자바스크립트](https://hwanginji.github.io/class2024/javascript/index.html)   
+[MySQL](https://hwanginji.github.io/class2024/javascript/index.html)
 
 # vscode 확장 프로그램
 Live Server : 웹페이지 미리보기   
@@ -22,4 +23,14 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 3. 숙제X ---> 발표1
 
 # 벌칙
-자기소개(5분) ---> 자기소개(10분) ---> 노래 ---> 춤 ---> 수업 발표
+자기소개(5분) ---> 자기소개(10분) ---> 노래 ---> 춤 ---> 수업 발표   
+
+## 색상 관련 사이트
+[Huemint - 브랜드 색상 제너레이션](https://huemint.com/brand-intersection/)   
+
+## 웹사이트 제작 레퍼런스 관련 사이트
+[Behance - 웹사이트 작업물](https://www.behance.net/?log_shim_removal=1)   
+[코드펜 - 애니메이션, 효과 소스 레퍼런스](https://wsss.tistory.com/category/Animation/CSS3)   
+
+## 변환 관련 사이트
+[SCSS -> CSS](https://www.sassmeister.com/)   
