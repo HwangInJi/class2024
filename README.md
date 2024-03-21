@@ -2,7 +2,7 @@
 [메인 페이지](https://hwanginji.github.io/class2024/)   
 
 [자바스크립트](https://hwanginji.github.io/class2024/javascript/index.html)   
-[MySQL](https://hwanginji.github.io/class2024/javascript/index.html)   
+[MySQL](https://hwanginji.github.io/class2024/mysql/index.html)   
 
 # vscode 확장 프로그램
 Live Server : 웹페이지 미리보기   
