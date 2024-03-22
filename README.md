@@ -5,6 +5,8 @@
 
 [MySQL](https://hwanginji.github.io/class2024/mysql/index.html)   
 
+[Quiz](https://hwanginji.github.io/class2024/quiz/index.html)   
+
 # vscode 확장 프로그램
 Live Server : 웹페이지 미리보기   
 Material Icon : 아이콘 설정   
