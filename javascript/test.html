@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 01 함수 : 선언적 함수
+        {
+            function func() {
+                console.log("01 함수 : 선언적 함수");
+            }
+            func();
+        }
+
+        // 02 함수 : 익명 함수
+        {
+            const func = function () {
+                console.log("02 함수 : 익명 함수");
+            }
+            func();
+        }
+
+        // 03 함수 : 매개변수 함수(선언적/익명)
+        {
+            function func(str) {
+                console.log(str);
+            }
+            func("함수 : 매개변수 함수(선언적)");
+
+            const func1 = function (str) {
+                console.log(str);
+            }
+            func1("함수 : 매개변수 함수(익명)");
+        }
+
+        // 04 함수 : 리턴값 함수
+        {
+            function func() {
+                return "01 함수 : 리턴값(선언적) 함수";
+            }
+            console.log(func());
+
+            const func1 = function () {
+                return "01 함수 : 리턴값(익명)) 함수";
+            }
+            console.log(func1());
+        }
+
+        // 05 함수 : 매개변수 + 리턴값 함수
+        {
+            function func(str) {
+                return str;
+            }
+            console.log(func("01 함수 : 매개변수 + 리턴값(선언적) 함수"));
+
+            const func1 = function (str) {
+                return str;
+            }
+            console.log(func1("01 함수 : 매개변수 + 리턴값(익명) 함수"));
+        }
+    </script>
+</body>
+
+</html>
