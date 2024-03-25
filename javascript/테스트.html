@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 선언적 함수
+        {
+            function func() {
+                console.log("01. 선언적 함수");
+            }
+            func();
+        }
+
+        // 2. 익명 함수
+        {
+            const func = function () {
+                console.log("02. 익명 함수");
+            }
+            func();
+        }
+
+        // 3. 매개변수 함수
+        {
+            function func(str) {
+                console.log(str);
+            }
+            func("03. 매개변수 함수(선언적)");
+
+            const func1 = function (str) {
+                console.log(str);
+            }
+            func1("03. 매개변수 함수(익명)");
+        }
+
+        // 4. 리턴값
+        {
+            function func() {
+                return "04. 리턴값 함수(선언적)";
+            }
+            console.log(func());
+
+            const func1 = function () {
+                return "04. 리턴값 함수(익명)";
+            }
+            console.log(func1());
+        }
+
+        // 5. 매개변수 + 리턴값
+        {
+            function func(str) {
+                return str;
+            }
+            console.log(func("05. 매개변수 + 리턴값(선언적)"));
+
+            const func1 = function (str) {
+                return str;
+            }
+            console.log(func1("05. 매개변수 + 리턴값(익명)"));
+        }
+
+        // 6. 화살표 함수 선언적
+        {
+            func = () => {
+                console.log("06. 화살표 함수 선언적");
+            }
+            func();
+        }
+
+        // 7. 화살표 함수 익명
+        {
+            const func = () => {
+                console.log("07. 화살표 함수 익명");
+            }
+            func();
+        }
+
+        // 8. 화살표 함수 매개변수
+        {
+            func = (str) => {
+                console.log(str);
+            }
+            func("08. 화살표 함수 매개변수(선언적)");
+
+            const func1 = (str) => {
+                console.log(str);
+            }
+            func1("08. 화살표 함수 매개변수(익명)");
+        }
+
+        // 9. 화살표 함수 리턴값
+        {
+            func = () => {
+                return "09. 화살표 함수 리턴값(선언적)";
+            }
+            console.log(func());
+
+            const func1 = () => {
+                return "09. 화살표 함수 리턴값(익명)";
+            }
+            console.log(func1());
+        }
+
+        // 10. 화살표 함수 매개변수 + 리턴값
+        {
+            func = (str) => {
+                return str;
+            }
+            console.log(func("10. 화살표 함수 매개변수 + 리턴값(선언적)"));
+
+            const func1 = (str) => {
+                return str;
+            }
+            console.log(func1("10. 화살표 함수 매개변수 + 리턴값(익명)"));
+        }
+    </script>
+</body>
+
+</html>
