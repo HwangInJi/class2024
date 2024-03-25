@@ -76,7 +76,7 @@
                     이 함수는 선언 시 어디서든 호출할 수 있고 함수를 호출할 때는 함수 이름과 괄호를 사용해야 합니다.
                 </p>
                 <pre><code>{
-    function func() {
+    function func () {
         console.log("01. 함수가 실행되었습니다.")
     }
     func();
@@ -318,19 +318,25 @@
                     기존 리턴값 함수에서 function을 지운 후 func1과 () 사이엔 '=' ,()와 {} 사이엔 '=>'를 입력합니다.
                 </p>
                 <pre><code>{
-    // 선언적 함수
-    func = () => {
+    // 기존 리턴값 선언적 함수
+    function func = (){
         return "09. 함수가 실행되었습니다.";
     }
     console.log(func());
-    
+
     // 화살표 리턴값 선언적 함수
     func = () => {
         return "09. 함수가 실행되었습니다.";
     }
     console.log(func());
 
-    // 익명 함수
+    // 기존 리턴값 익명 함수
+    const func1 = function (){
+        return "09. 함수가 실행되었습니다.";
+    }
+    console.log(func1());
+
+    // 화살표 리턴값 익명 함수
     const func1 = () => {
         return "09. 함수가 실행되었습니다.";
     }
@@ -341,6 +347,8 @@
                         <summary>결과 확인하기</summary>
                         <div>
                             09. 함수가 실행되었습니다.<br />
+                            09. 함수가 실행되었습니다.<br />
+                            09. 함수가 실행되었습니다.<br />
                             09. 함수가 실행되었습니다.
                         </div>
                     </details>
@@ -349,23 +357,42 @@
             <!-- //sample09 -->
 
             <div id="sample10" class="sample">
-                <h3>02. 함수 : 익명 함수</h3>
+                <h3>10. 화살표 함수 : 매개변수 + 리턴값</h3>
                 <p>
-                    선언적 함수 정의(Declarative function definition)는 함수를 선언할 때 함수 이름과 함께 function 키워드를 사용하여 함수를 명시적으로 정의하는
-                    방식입니다.<br />
-                    이 함수는 선언 시 어디서든 호출할 수 있고 함수를 호출할 때는 함수 이름과 괄호를 사용해야 합니다.
+                    기존 매개변수 + 리턴값 함수에서 function을 지운 후 func1과 () 사이엔 '=' ,()와 {} 사이엔 '=>'를 입력합니다.<br />
+                    1. 만약 매개변수가 하나라면 ()는 생략이 가능합니다.<br />
+                    2. 만약 매개변수가 하나라면 (), {}, return은 생략이 가능합니다.<br />
+                    3. 만약 선언적 함수를 쓰게 될 경우 익명 함수에서 const, (), {}, return은 생략이 가능합니다. 단, 가독성은 떨어집니다.
                 </p>
                 <pre><code>{
-    function func() {
-        console.log("01. 함수가 실행되었습니다.")
+    // 익명 함수(화살표 함수) + 매개변수 + 리턴값
+    const func = (str) => {
+        return str;
     }
-    func();
+    console.log(func("10. 함수가 실행되었습니다."));
+
+    // 매개변수가 하나이면 () 생략 가능
+    const func2 = str => {
+        return str;
+    }
+    console.log(func2("10. 함수가 실행되었습니다."));
+
+    // {},리턴 생략 가능
+    const func3 = str => str;
+    console.log(func3("10. 함수가 실행되었습니다."));
+
+    // 선언적 함수를 쓰게 될 경우 const 생략 가능 but, 가독성이 없음
+    func4 = str => str;
+    console.log(func4("10. 함수가 실행되었습니다."));
 }</code></pre>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            01. 함수가 실행되었습니다.
+                            10. 함수가 실행되었습니다.<br />
+                            10. 함수가 실행되었습니다.<br />
+                            10. 함수가 실행되었습니다.<br />
+                            10. 함수가 실행되었습니다.
                         </div>
                     </details>
                 </div>
