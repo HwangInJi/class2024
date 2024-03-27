@@ -42,4 +42,7 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 
 ### 3D 관련 사이트
 [Three.js - 3D 웹사이트 작업물](https://threejs.org/)   
-[Spline - 3D 작업 만들기](https://spline.design/)   
+[Spline - 3D 작업 만들기](https://spline.design/)  
+
+### 포트폴리오 관련 참고   
+[포트폴리오 참고](https://github.com/webstoryboy/studyPORT?tab=readme-ov-file)   
