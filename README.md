@@ -29,6 +29,9 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 ### 색상 관련 사이트
 [Huemint - 브랜드 색상 제너레이션](https://huemint.com/brand-intersection/)   
 
+### 폰트 관련 사이트
+[폰트어썸](https://wess.tistory.com/)   
+
 ### 웹사이트 제작 레퍼런스 관련 사이트
 [Behance - 웹사이트 작업물](https://www.behance.net/?log_shim_removal=1)   
 [코드펜 - 애니메이션, 효과 소스 레퍼런스](https://wsss.tistory.com/category/Animation/CSS3)   
