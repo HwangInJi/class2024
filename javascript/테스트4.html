@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.선언적
+        {
+            function test() {
+                console.log("1.선언적");
+            }
+            test();
+        }
+        //2.익명
+        {
+            const test = function () {
+                console.log("2.익명");
+            }
+            test();
+        }
+        //3.매개변수
+        {
+            function test(string) {
+                console.log(string);
+            }
+            test("3.매개변수");
+        }
+        //4.리턴값
+        {
+            function test() {
+                return "4.리턴값";
+            }
+            console.log(test());
+        }
+        //5.매개+리턴
+        {
+            function test(string) {
+                return string;
+            }
+            console.log(test("5.매개+리턴"));
+        }
+        //6.화살표선언적
+        {
+            test = () => {
+                console.log("6.화살표 선언적");
+            }
+            test();
+        }
+        //7.화살표익명
+        {
+            const test = () => {
+                console.log("7.화살표익명");
+            }
+            test();
+        }
+        //8.화살표매개변수
+        {
+            test = (string) => {
+                console.log(string);
+            }
+            test("8.화살표 매개변수");
+        }
+        //9.화살표리턴값
+        {
+            test = () => {
+                return "9.화살표 리턴값";
+            }
+            console.log(test());
+        }
+        //10.화살표매개+리턴
+        {
+            test = (string) => {
+                return string;
+            }
+            console.log(test("10.화살표 매개+리턴"));
+        }
+        //for
+        {
+            const arr = [0, 1, 2, 3];
+
+            console.log("11.for");
+            for (let i = 0; i < arr.length; i++) {
+                console.log(arr[i]);
+            }
+        }
+        //forEach
+        {
+            const arr = [0, 1, 2, 3];
+
+            console.log("12.for");
+            arr.forEach(function (element) {
+                console.log(element);
+            });
+        }
+        //for of
+        {
+            const arr = [0, 1, 2, 3];
+
+            console.log("13.for of");
+            for (let element of arr) {
+                console.log(element);
+            }
+        }
+        //for in
+        {
+            const arr = [0, 1, 2, 3];
+
+            console.log("14.for in");
+            for (let element in arr) {
+                console.log(arr[element]);
+            }
+        }
+        //map
+        {
+            const arr = [0, 1, 2, 3];
+
+            console.log("15.map");
+            arr.map(function (element) {
+                console.log(element);
+            });
+        }
+    </script>
+</body>
+
+</html>
