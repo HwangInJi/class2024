@@ -35,15 +35,14 @@
                 <div class="info">
                     create table 테이블명;
                 </div>
-                <pre><code class="language-js">
-create table members(
-                        memberID int(10) unsigned auto_increment, 
-                        youName varchar(10) NOT NULL,
-                        youPass varchar(10) NOT NULL,
-                        youAge int(5) NOT NULL,
-                        youBirth int(5) NOT NULL,
-                        regTime int(30) NOT NULL,
-                        PRIMARY KEY(memberID)
+                <pre><code class="language-js">create table members(
+    memberID int(10) unsigned auto_increment, 
+    youName varchar(10) NOT NULL,
+    youPass varchar(10) NOT NULL,
+    youAge int(5) NOT NULL,
+    youBirth int(5) NOT NULL,
+    regTime int(30) NOT NULL,
+    PRIMARY KEY(memberID)
 ) charset=utf8;</code></pre>
                 <!-- <pre><code class="language-js">
 INSERT INTO members3(youName, youPass, youAge, youBirth, regTime) VALUES("황상연", "1234", "33", "990304", "1023958375");
@@ -145,8 +144,7 @@ Query OK, 0 rows affected (0.01 sec)</code></pre>
 9 rows in set (0.00 sec)</code></pre>
 
 
-                <pre><code class="language-js">
-    create table members(
+                <pre><code class="language-js">create table members(
     memberID int(10) unsigned auto_increment,
     youName varchar(10) NOT NULL,
     youPass varchar(10) NOT NULL,
