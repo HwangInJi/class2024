@@ -227,12 +227,6 @@ li {
     margin-bottom: 100px;
 }
 
-.main__sample .sample h2 {
-    font-size: 35px;
-    font-family: var(--fontG);
-    margin-bottom: 20px;
-}
-
 .main__sample .sample h3 {
     font-size: 24px;
     font-family: var(--fontG);
