@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 04</title>
+
+    <link rel="stylesheet" href="assets/css/quiz.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>
+            <a href="index.html">Quiz</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="quiz01.html">1</a></li>
+                <li><a href="quiz02.html">2</a></li>
+                <li><a href="quiz03.html">3</a></li>
+                <li class="active"><a href="quiz04.html">4</a></li>
+                <li><a href="quiz05.html">5</a></li>
+                <li><a href="quiz06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="quiz__wrap"></div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:wownd456@naver.com">wownd456@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        // 선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+
+        // 문제 정보
+        const quizInfo = [
+            {
+                date: "2021년 1회",
+                type: "웹디자인기능사",
+                question: "다음 중 디자인의 기본 요소들로 옳은 것은?",
+                choices: {
+                    1: "선, 색채, 공간, 수량",
+                    2: "점, 선, 면, 질감",
+                    3: "시간, 수량, 구조, 공간",
+                    4: "면, 구조, 공간, 수량"
+                },
+                answer: "2",
+                desc: "디자인의 기본 요소에는 점, 선, 면, 질감이 있습니다."
+            },
+            {
+                date: "2021년 1회",
+                type: "웹디자인기능사",
+                question: "기억 장치 고유의 번지로서 0, 1, 2, 3, ...과 같이 16진수로 약속하여 순서대로 정해 놓은 번지는?",
+                choices: {
+                    1: "절대번지",
+                    2: "상대번지",
+                    3: "필수번지",
+                    4: "선택번지"
+                },
+                answer: "1",
+                desc: "절대번지는 처음부터 순서대로 0, 1, 2, 3 과같이 주소를 부여 하는 방식입니다."
+            },
+            {
+                date: "2021년 1회",
+                type: "웹디자인기능사",
+                question: "제어장치의 기능에 대한 설명으로 틀린 것은?",
+                choices: {
+                    1: "입/출력장치를 제어한다.",
+                    2: "주기억장치에 기억된 명령을 꺼내어 해독한다.",
+                    3: "프로그램카운터와 명령레지스터를 이용하여 명령어 처리순서를 제어한다.",
+                    4: "산술 및 논리연산을 실행하는 장치이다."
+                },
+                answer: "4",
+                desc: "산술 및 논리연산을 실행하는 장치는 ALU로써 연산장치라고 합니다."
+            },
+            {
+                date: "2021년 1회",
+                type: "웹디자인기능사",
+                question: "스프레드시트 작업에서 반복적으로 실행하는 경우에 한 번의 명령으로 자동화시켜 처리하는 기능은?",
+                choices: {
+                    1: "뷰",
+                    2: "필터",
+                    3: "매크로",
+                    4: "정렬"
+                },
+                answer: "3",
+                desc: "매크로 : 반복되는 단순 작업을 기록하였다가 자동으로 재생하는 기능"
+            },
+            {
+                date: "2021년 1회",
+                type: "웹디자인기능사",
+                question: "다음 중 아날로그 CATV방송의 영상신호 전송방식은?",
+                choices: {
+                    1: "FSK 방식",
+                    2: "AM 방식",
+                    3: "FM 방식",
+                    4: "PCM 방식"
+                },
+                answer: "2",
+                desc: "CATV는 AM방식입니다."
+            }
+        ]
+
+        // 문제 출력
+        const updateQuiz = () => {
+            const quizArray = [];
+
+            quizInfo.forEach((quiz, index) => {
+                quizArray.push(`
+                    <div class="quiz">
+                        <div class="quiz__header">${quiz.date} ${quiz.type}</div>
+                        <!-- //quiz__header -->
+
+                        <div class="quiz__main">
+                            <div class="question">${index + 1}. ${quiz.question}</div>
+                            <div class="choices">
+                                <label for="choice1-${index}">
+                                    <input type="radio" id="choice1-${index}" name="choice-${index}" value="1">
+                                    <span>${quiz.choices[1]}</span >
+                                </label >
+
+                                <label for="choice2-${index}">
+                                    <input type="radio" id="choice2-${index}" name="choice-${index}" value="2">
+                                    <span>${quiz.choices[2]}</span>
+                                </label>
+
+                                <label for="choice3-${index}">
+                                    <input type="radio" id="choice3-${index}" name="choice-${index}" value="3">
+                                    <span>${quiz.choices[3]}</span>
+                                </label>
+
+                                <label for="choice4-${index}">
+                                    <input type="radio" id="choice4-${index}" name="choice-${index}" value="4">
+                                    <span>${quiz.choices[4]}</span>
+                                </label>
+                            </div >
+                            <div class="answer none">${quiz.answer}</div>
+                            <div class="desc none">${quiz.desc}</div>
+                        </div>
+                        <!-- //quiz__main -->
+
+                        <div class="quiz__footer" >
+                            <button class="confirm">정답 확인하기</button>
+                        </div>
+                        <!-- //quiz__footer -->
+                    </div>
+                `);
+
+                quizWrap.innerHTML = quizArray.join("");
+            });
+
+            console.log(quizArray);
+        }
+        updateQuiz();
+    </script>
+</body>
+
+</html>
