@@ -835,63 +835,120 @@
 
             <div id="sample24" class="sample">
                 <h3>++ 연산자(논리, 산술, 비교, 조건...)</h3>
-                <p>
-                    아래는 연산자 종류를 정리한 내용입니다.
-                </p>
-                <pre><code>1. 산술 연산자
+                <h3>1. 산술 연산자</h3><br />
 
-① 덧셈(+) - sum : 두 개 이상의 숫자나 문자열을 더할 때 사용됩니다.
-{
+                <p>① 덧셈(+) - sum : 두 개 이상의 숫자나 문자열을 더할 때 사용</p>
+                <pre><code>{
     let sum = 5 + 3;
     console.log(sum); 
 
     let concatenation = "Hello " + "world"; 
     console.log(concatenation); 
-}
+}</code></pre>
 
-② 뺄셈(-) - difference : 두 숫자간의 차이를 계산할 때 사용됩니다.
-{
-    let difference = 10 - 4; 
-    console.log(difference); 
-}
+                <p>② 뺄셈(-) - difference : 두 숫자간의 차이를 계산할 때 사용</p>
+                <pre><code>{
+    let difference = 10 - 4;
+    console.log(difference);
+}</code></pre>
 
-③ 곱셈(*) - product : 두 숫자의 곱을 계산할 때 사용됩니다.
-{
-    let product = 6 * 4; 
-    console.log(product); 
-}
+                <p>③ 곱셈(*) - product : 두 숫자의 곱을 계산할 때 사용</p>
+                <pre><code>{
+    let product = 6 * 4;
+    console.log(product);
+}</code></pre>
 
-④ 나눗셈(/) - quotient : 두 숫자를 나눌 때 사용되며, 나눗셈의 결과는 부동 소수점 형태로 반환될 수 있습니다.
-{
-    let quotient = 10 / 2; 
-    console.log(quotient); 
-}
 
-⑤ 나머지(%) - remainder : 두 숫자를 나눈 후 남는 나머지를 계산할 때 사용됩니다.
-{
-    let remainder = 10 % 3; 
-    console.log(remainder); 
-}
-</code></pre>
-                <pre><code>2. 논리 연산자
-                    
-① AND (&&)
-② OR (||)
-③ NOT (!)
-</pre></code>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            1. 산술 연산자<br />
-                            (1) 8, Hello world<br />
-                            (2) 6<br />
-                            (3) 24<br />
-                            (4) 5<br />
-                            (5) 1<br />
-                        </div>
-                    </details>
-                </div>
+                <p>④ 나눗셈(/) - quotient : 두 숫자를 나눌 때 사용되며, 나눗셈의 결과는 부동 소수점 형태로 반환될 수 있음</p>
+                <pre><code>{
+    let quotient = 10 / 2;
+    console.log(quotient);
+}</code></pre>
+
+
+                <p>⑤ 나머지(%) - remainder : 두 숫자를 나눈 후 남는 나머지를 계산할 때 사용</p>
+                <pre><code>{
+    let remainder = 10 % 3;
+    console.log(remainder);
+}</code></pre>
+
+                <h3>2. 논리 연산자</h3><br />
+
+                <p>① AND(&&) : 두 조건이 모두 참일 때만 전체 표현식이 참이 되는 경우</p>
+
+                <p>② OR(||) : 두 조건 중 하나 이상이 참이 되는 경우</p>
+
+                <p>③ NOT(!) : 주어진 조건의 결과를 반대를 반환</p>
+
+                <h3>3. 비교 연산자</h3><br />
+
+                <p>① 같음(==, ===) : 두 조건이 모두 참일 때만 전체 표현식이 참이 되는 경우<br /><br />
+                    - == : 연산자의 두 값이 동등한지 여부를 확인하며, 자료형이 다르더라도 일치하면 true를 반환</p>
+                <pre><code>{
+    let num1 = 5;
+    let num2 = "5";
+
+    console.log(num1 == num2);  // true (값만 비교하므로 true)
+    console.log(num1 === num2); // false (값과 자료형이 다르므로 false)
+}</code></pre>
+                <p>- === : 연산자의 두 값과 자료형이 모두 동일한지 확인하며, 모두 일치해야만 true를 반환</p>
+                <pre><code>{
+    let num1 = 5;
+    let num2 = "5";
+
+    console.log(num1 != num2);  // false (값은 같으므로 false)
+    console.log(num1 !== num2); // true (값은 같지만 자료형이 다르므로 true)
+}</code></pre>
+
+                <p>② 다름(!=, !==) : 두 조건 중 하나 이상이 참이 되는 경우<br /><br />
+                    - != : 연산자의 두 값이 서로 다른지 여부를 확인하며, 자료형이 다르더라도 값이 다르면 true를 반환</p>
+                <pre><code>{
+let num1 = 5;
+let num2 = "5";
+
+console.log(num1 == num2);  // true (값만 비교하므로 true)
+console.log(num1 === num2); // false (값과 자료형이 다르므로 false)
+}</code></pre>
+                <p>- !== : 연산자의 두 값과 자료형이 모두 다른지 확인하며, 값과 자료형이 하나라도 다르면 true를 반환</p>
+                <pre><code>{
+let num1 = 5;
+let num2 = "5";
+
+console.log(num1 != num2);  // false (값은 같으므로 false)
+console.log(num1 !== num2); // true (값은 같지만 자료형이 다르므로 true)
+}</code></pre>
+
+                <p>③ 크다(>) : 숫자 비교에 많이 사용되며, 왼쪽 피연산자가 오른쪽 피연산자보다 큰지 여부를 확인</p>
+                <pre><code>{
+    let num1 = 5;
+    let num2 = 10;
+
+    console.log(num2 > num1); // true (10은 5보다 큼)
+}</code></pre>
+
+                <p>④ 작다(&lt;) : 숫자 비교에 많이 사용되며, 왼쪽 피연산자가 오른쪽 피연산자보다 작은지 여부를 확인</p>
+                <pre><code>{
+    let num1 = 5;
+    let num2 = 10;
+
+    console.log(num1 &lt; num2); // true (5는 10보다 작음)
+}</code></pre>
+
+                <p>⑤ 크거나 같다(>=) : 왼쪽 피연산자가 오른쪽 피연산자보다 크거나 같은지 여부를 확인</p>
+                <pre><code>{
+    let num1 = 5;
+    let num2 = 10;
+
+    console.log(num2 >= num1); // true (10은 5보다 크거나 같음)
+}</code></pre>
+
+                <p>⑥ 작거나 같다(&lt;=) : 왼쪽 피연산자가 오른쪽 피연산자보다 작거나 같은지 여부를 확인</p>
+                <pre><code>{
+    let num1 = 5;
+    let num2 = 10;
+
+    console.log(num1 &lt;= num2); // true (5는 10보다 작거나 같음)
+}</code></pre>
             </div>
         </div>
 
