@@ -833,8 +833,8 @@
                 </div>
             </div>
 
-            <div id="sample24" class="sample">
-                <h3>++ 연산자(논리, 산술, 비교, 조건...)</h3>
+            <div id="sample24-1" class="sample">
+                <h2>++++연산자++++</h2>
                 <h3>1. 산술 연산자</h3><br />
 
                 <p>① 덧셈(+) - sum : 두 개 이상의 숫자나 문자열을 더할 때 사용</p>
@@ -871,15 +871,36 @@
     let remainder = 10 % 3;
     console.log(remainder);
 }</code></pre>
+            </div>
 
+            <div id="sample24-2" class="sample">
                 <h3>2. 논리 연산자</h3><br />
 
-                <p>① AND(&&) : 두 조건이 모두 참일 때만 전체 표현식이 참이 되는 경우</p>
+                <p>① AND(&&) : 논리곱이라고도 하며, 두 조건이 모두 참일 때만 전체 표현식이 참이 되는 경우</p>
+                <pre><code>{
+    x = True
+    y = False
+    result = x and y
+    print(result)  # Output: False
+}</code></pre>
 
-                <p>② OR(||) : 두 조건 중 하나 이상이 참이 되는 경우</p>
+                <p>② OR(||) : 논리합이라고도 하며, 두 조건 중 하나 이상이 참이 되는 경우</p>
+                <pre><code>{
+    x = True
+    y = False
+    result = x or y
+    print(result) # Output: True
+}</code></pre>
 
-                <p>③ NOT(!) : 주어진 조건의 결과를 반대를 반환</p>
+                <p>③ NOT(!) : 논리 부정이라고도 하며,주어진 조건의 결과를 반대를 반환</p>
+                <pre><code>{
+    x = True
+    result = not x
+    print(result)  # Output: False
+}</code></pre>
+            </div>
 
+            <div id="sample24-3" class="sample">
                 <h3>3. 비교 연산자</h3><br />
 
                 <p>① 같음(==, ===) : 두 조건이 모두 참일 때만 전체 표현식이 참이 되는 경우<br /><br />
