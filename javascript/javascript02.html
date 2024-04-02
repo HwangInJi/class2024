@@ -329,22 +329,22 @@
                     단, forEach와는 달리 배열형식으로 결과값이 도출됩니다.
                 </p>
                 <pre><code>{
-                    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-        
-                    //01
-                    arr.map(function (element) {       
-                        console.log(element);
-                    });
-        
-                    //02
-                    arr.map(function (element, index) {     
-                        console.log(index);
-                    });
-        
-                    //03
-                    arr.map(function (element, index, array) {     
-                        console.log(array);
-                    });
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    //01
+    arr.map(function (element) {       
+        console.log(element);
+    });
+
+    //02
+    arr.map(function (element, index) {     
+        console.log(index);
+    });
+
+    //03
+    arr.map(function (element, index, array) {     
+        console.log(array);
+    });
 }</code></pre>
                 <div class="result">
                     <details>
@@ -575,9 +575,9 @@
     const arr = [100, 200, "javascript"];
     const copy = [...arr];
 
-    console.log(arr);       // [100, 200, 'javascript']
-    console.log(...arr);       // 100 200 'javascript'
-    console.log(copy);       // [100, 200, 'javascript']
+    console.log(arr);      
+    console.log(...arr);   
+    console.log(copy);     
 }
 
 {
@@ -587,9 +587,9 @@
     const merged1 = [...arr1, ...arr2];
     const merged2 = [...arr1, "javascript", ...arr2, "jquery"];
 
-    console.log(arr1.concat(arr2));     // [100, 200, 300, 400]
-    console.log(merged1);               // [100, 200, 300, 400]
-    console.log(merged2);               // [100, 200, 'javascript', 300, 400, 'jquery']
+    console.log(arr1.concat(arr2));    
+    console.log(merged1);              
+    console.log(merged2);              
 }
 
 {
@@ -599,7 +599,7 @@
     }
 
     const nums = [100, 200, 300];
-    console.log(numbers(...nums));      // 600
+    console.log(numbers(...nums));      
 }
 
 {
@@ -607,8 +607,8 @@
     const text1 = "javascript";
     const text2 = [...text1];
 
-    console.log(text1);     // javascript
-    console.log(text2);     // ['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+    console.log(text1);    
+    console.log(text2);    
 }</code></pre>
                 <div class="result">
                     <details>
@@ -621,7 +621,7 @@
                             02.<br />
                             [100, 200, 300, 400]<br />
                             [100, 200, 300, 400]<br />
-                            [100, 200, 'javascript', 300, 400, 'jquery']<br />
+                            [100, 200, 'javascript', 300, 400, 'jquery']<br /><br />
                             03.<br />
                             600<br /><br />
                             04.<br />

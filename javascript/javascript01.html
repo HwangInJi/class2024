@@ -55,8 +55,8 @@
                 <li><a href="#">22. 객체 : 데이터 저장(키와값) : 표현방법10 : 객체펼침연산자</a></li>
 
                 <li><a href="#">23. 파일 : 데이터 교환(JSON)</a></li>
-                <li><a href="#">++ 연산자(논리, 산술, 비교, 조건...)</a></li>
-                <li><a href="#">++ 자료형</a></li>
+                <li><a href="#">24. 연산자(Operator)</a></li>
+                <li><a href="#">25. 자료형(Data type)</a></li>
             </ul>
         </div>
         <!-- //main__menu -->
@@ -833,143 +833,66 @@
                 </div>
             </div>
 
-            <div id="sample24-1" class="sample">
-                <h2>++++연산자++++</h2>
-                <h3>1. 산술 연산자</h3><br />
+            <div id="sample24" class="sample">
+                <h3>24. 연산자(Operator)</h3>
+                <p>
+                    연산자(Operator)는 프로그래밍에서 사용되는 기호나 키워드로, 특정한 작업을 수행하는 데에 쓰입니다.<br />
+                    다양한 종류의 연산자가 있으며, 주로 산술, 비교, 할당, 논리 등의 작업을 수행합니다.
+                </p>
+                <pre><code>① 산술 연산자(Arithmetic Operators)
+: 수학적인 연산을 수행하는데 사용되며, 주로 덧셈(+), 뺄셈(-), 곱셈(*), 나눗셈(/) 등이 있습니다.
 
-                <p>① 덧셈(+) - sum : 두 개 이상의 숫자나 문자열을 더할 때 사용</p>
-                <pre><code>{
-    let sum = 5 + 3;
-    console.log(sum); 
+② 비교 연산자(Comparison Operators)
+: 두 개의 값이나 표현식을 비교하는데 사용되며, 같음(==), 다름(!=), 크다(>), 작다(&lt;) 등이 있습니다.
 
-    let concatenation = "Hello " + "world"; 
-    console.log(concatenation); 
-}</code></pre>
+③ 할당 연산자(Assignment Operators)
+: 변수에 값을 할당하는데 사용되며, 가장 일반적인 할당 연산자는 등호(=)입니다. 그 외에 더하기 후 할당(+=), 빼기 후 할당(-=) 등이 있습니다.
 
-                <p>② 뺄셈(-) - difference : 두 숫자간의 차이를 계산할 때 사용</p>
-                <pre><code>{
-    let difference = 10 - 4;
-    console.log(difference);
-}</code></pre>
+④ 논리 연산자(Logical Operators)
+: 논리적인 연산을 수행하는데 사용되며, 주로 AND(&&), OR(||), NOT(!) 연산자가 있습니다.
 
-                <p>③ 곱셈(*) - product : 두 숫자의 곱을 계산할 때 사용</p>
-                <pre><code>{
-    let product = 6 * 4;
-    console.log(product);
-}</code></pre>
+⑤ 비트 연산자(Bitwise Operators)
+: 이진수로 표현된 데이터의 비트 단위 연산을 수행하는데 사용되며, 주로 AND(&), OR(|), XOR(^), NOT(~) 연산자가 있습니다.
 
+⑥ 삼항 연산자(Ternary Operator)
+: 세 개의 피연산자를 사용하여 조건에 따라 다른 값을 반환하는 연산자로, 일반적으로 조건식 ? 값1 : 값2 형태로 사용됩니다.
 
-                <p>④ 나눗셈(/) - quotient : 두 숫자를 나눌 때 사용되며, 나눗셈의 결과는 부동 소수점 형태로 반환될 수 있음</p>
-                <pre><code>{
-    let quotient = 10 / 2;
-    console.log(quotient);
-}</code></pre>
-
-
-                <p>⑤ 나머지(%) - remainder : 두 숫자를 나눈 후 남는 나머지를 계산할 때 사용</p>
-                <pre><code>{
-    let remainder = 10 % 3;
-    console.log(remainder);
-}</code></pre>
+⑦ 증감 연산자(Increment/Decrement Operators)
+: 변수의 값을 증가시키거나 감소시키는데 사용되며, 전위 증가(++x), 후위 증가(x++), 전위 감소(--x), 후위 감소(x--) 등이 있습니다.</code></pre>
             </div>
 
-            <div id="sample24-2" class="sample">
-                <h3>2. 논리 연산자</h3><br />
+            <div id="sample25" class="sample">
+                <h3>25. 자료형(Data type)</h3>
+                <p>
+                    자료형(Data type)은 프로그래밍에서 데이터의 종류를 나타내는데 사용되는 것을 말하며,<br />
+                    각각의 자료형은 특정한 종류의 데이터를 저장하고 다루는 방법을 정의합니다.
+                </p>
+                <pre><code>① 정수형(Integer)
+: 정수 값을 나타내는 자료형으로, 주로 정수를 저장하고 다루는데 사용됩니다. 예를 들어, -10, 0, 42와 같은 값이 정수형에 속합니다.
 
-                <p>① AND(&&) : 논리곱이라고도 하며, 두 조건이 모두 참일 때만 전체 표현식이 참이 되는 경우</p>
-                <pre><code>{
-    x = True
-    y = False
-    result = x and y
-    print(result)  # Output: False
-}</code></pre>
+② 부동 소수점형(Float/Double)
+: 소수점을 가지는 실수 값을 나타내는 자료형으로, 부동 소수점형은 실수를 근사하여 저장합니다.
+※ 단정도 부동 소수점(float)과 배정도 부동 소수점(double)으로 나뉩니다.
 
-                <p>② OR(||) : 논리합이라고도 하며, 두 조건 중 하나 이상이 참이 되는 경우</p>
-                <pre><code>{
-    x = True
-    y = False
-    result = x or y
-    print(result) # Output: True
-}</code></pre>
+③ 문자형(Character)
+: 단일 문자를 나타내는 자료형으로, 주로 문자열을 구성하는데 사용됩니다. 예를 들어, 'A', 'b', '3'과 같은 값이 문자형에 속합니다.
 
-                <p>③ NOT(!) : 논리 부정이라고도 하며,주어진 조건의 결과를 반대를 반환</p>
-                <pre><code>{
-    x = True
-    result = not x
-    print(result)  # Output: False
-}</code></pre>
-            </div>
+④ 문자열(String)
+: 문자의 시퀀스(연속적인 나열)를 나타내는 자료형으로, 하나 이상의 문자로 이루어진 텍스트 데이터를 저장하고 다루는데 사용됩니다.
 
-            <div id="sample24-3" class="sample">
-                <h3>3. 비교 연산자</h3><br />
+⑤ 불리언(Boolean)
+: 참(True) 또는 거짓(False) 값을 나타내는 자료형으로, 주로 조건식의 결과를 표현하거나 제어 흐름을 결정하는데 사용됩니다.
 
-                <p>① 같음(==, ===) : 두 조건이 모두 참일 때만 전체 표현식이 참이 되는 경우<br /><br />
-                    - == : 연산자의 두 값이 동등한지 여부를 확인하며, 자료형이 다르더라도 일치하면 true를 반환</p>
-                <pre><code>{
-    let num1 = 5;
-    let num2 = "5";
+⑥ 배열(Array)
+: 동일한 자료형의 데이터를 순서대로 저장하는 자료구조로, 여러 개의 값을 하나의 변수로 다룰 수 있습니다.
 
-    console.log(num1 == num2);  // true (값만 비교하므로 true)
-    console.log(num1 === num2); // false (값과 자료형이 다르므로 false)
-}</code></pre>
-                <p>- === : 연산자의 두 값과 자료형이 모두 동일한지 확인하며, 모두 일치해야만 true를 반환</p>
-                <pre><code>{
-    let num1 = 5;
-    let num2 = "5";
+⑦ 구조체(Struct)
+: 구조체는 여러 필드로 구성되어 있으며, 서로 다른 자료형의 데이터를 묶어서 새로운 자료형을 정의하는 데 사용됩니다.
+이 때, 각 필드는 각각 다른 자료형을 가질 수 있습니다.
 
-    console.log(num1 != num2);  // false (값은 같으므로 false)
-    console.log(num1 !== num2); // true (값은 같지만 자료형이 다르므로 true)
-}</code></pre>
-
-                <p>② 다름(!=, !==) : 두 조건 중 하나 이상이 참이 되는 경우<br /><br />
-                    - != : 연산자의 두 값이 서로 다른지 여부를 확인하며, 자료형이 다르더라도 값이 다르면 true를 반환</p>
-                <pre><code>{
-let num1 = 5;
-let num2 = "5";
-
-console.log(num1 == num2);  // true (값만 비교하므로 true)
-console.log(num1 === num2); // false (값과 자료형이 다르므로 false)
-}</code></pre>
-                <p>- !== : 연산자의 두 값과 자료형이 모두 다른지 확인하며, 값과 자료형이 하나라도 다르면 true를 반환</p>
-                <pre><code>{
-let num1 = 5;
-let num2 = "5";
-
-console.log(num1 != num2);  // false (값은 같으므로 false)
-console.log(num1 !== num2); // true (값은 같지만 자료형이 다르므로 true)
-}</code></pre>
-
-                <p>③ 크다(>) : 숫자 비교에 많이 사용되며, 왼쪽 피연산자가 오른쪽 피연산자보다 큰지 여부를 확인</p>
-                <pre><code>{
-    let num1 = 5;
-    let num2 = 10;
-
-    console.log(num2 > num1); // true (10은 5보다 큼)
-}</code></pre>
-
-                <p>④ 작다(&lt;) : 숫자 비교에 많이 사용되며, 왼쪽 피연산자가 오른쪽 피연산자보다 작은지 여부를 확인</p>
-                <pre><code>{
-    let num1 = 5;
-    let num2 = 10;
-
-    console.log(num1 &lt; num2); // true (5는 10보다 작음)
-}</code></pre>
-
-                <p>⑤ 크거나 같다(>=) : 왼쪽 피연산자가 오른쪽 피연산자보다 크거나 같은지 여부를 확인</p>
-                <pre><code>{
-    let num1 = 5;
-    let num2 = 10;
-
-    console.log(num2 >= num1); // true (10은 5보다 크거나 같음)
-}</code></pre>
-
-                <p>⑥ 작거나 같다(&lt;=) : 왼쪽 피연산자가 오른쪽 피연산자보다 작거나 같은지 여부를 확인</p>
-                <pre><code>{
-    let num1 = 5;
-    let num2 = 10;
-
-    console.log(num1 &lt;= num2); // true (5는 10보다 작거나 같음)
-}</code></pre>
+⑧ 포인터(Pointer)
+: 메모리 주소를 저장하는 변수로, 해당 주소에 있는 데이터를 참조하는데 사용됩니다.
+포인터는 다른 변수의 주소를 가리키거나 메모리 할당을 동적으로 관리하는 등의 용도로 사용됩니다.</code></pre>
             </div>
         </div>
 
