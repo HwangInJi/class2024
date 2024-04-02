@@ -20,6 +20,16 @@
 - 메서드(innerText(), classList.add, addEventListener, if문)   
 
 [퀴즈 03](https://hwanginji.github.io/class2024/quiz/quiz03.html)   
+- 변수, 배열, 객체   
+- 선택자(querySelector(), querySelectorAll())   
+- 반복문(for(), break문)   
+- 메서드(innerText(), classList.add, addEventListener, if문)   
+
+[퀴즈 04](https://hwanginji.github.io/class2024/quiz/quiz04.html)   
+- 변수, 배열, 객체, 템플릿 리터럴   
+- 선택자(querySelector(), querySelectorAll())   
+- 반복문(forEach())   
+- 메서드(join(), push(), innerText())   
 
 ### vscode 확장 프로그램
 Live Server : 웹페이지 미리보기   
