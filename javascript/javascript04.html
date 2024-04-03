@@ -22,6 +22,15 @@
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
                 <li class="active"><a href="javascript04.html">데이터 제어하기</a></li>
             </ul>
+            <ul>
+                <li><a href="object01">문자열 객체</a></li>
+                <li><a href="object02">배열 객체</a></li>
+                <li><a href="object03">수학 객체</a></li>
+                <li><a href="object04">숫자 객체</a></li>
+                <li><a href="object05">브라우저 객체</a></li>
+                <li><a href="object06">요소 객체</a></li>
+                <li><a href="object07">이벤트 객체</a></li>
+            </ul>
         </nav>
     </header>
     <!-- //header -->
@@ -29,39 +38,111 @@
     <main id="main">
         <div class="main__menu container">
             <ul>
-                <li><a href="#">01. 변수 : 데이터 불러오기</a></li>
+                <li><a href="#">01. if문</a></li>
+                <li><a href="#">02. 다중 if문</a></li>
+                <li><a href="#">03. 중첩 if문</a></li>
+                <li><a href="#">04. if문 생략 & 상황 연산자</a></li>
+                <li><a href="#">05. swith문</a></li>
+                <li><a href="#">06. while문</a></li>
+                <li><a href="#">07. do while문</a></li>
+                <li><a href="#">08. for문</a></li>
+                <li><a href="#">09. 중첩 for문</a></li>
+                <li><a href="#">10. break문</a></li>
+                <li><a href="#">11. continue문</a></li>
             </ul>
         </div>
         <!-- //main__menu -->
 
         <div class="main__sample container">
             <div id="sample01" class="sample">
-                <h3>01. 변수 : 데이터 저장</h3>
+                <h3>01. if문(조건식)</h3>
                 <p>
-                    let을 사용하여 x, y, z에 변수값을 입력합니다.<br />
-                    변수는 데이터를 저장하는 기능을 하며, 이 때 저장된 데이터는 재사용이 가능합니다.
+                    if를 사용하여 조건식을 입력하면 조건식에 대한 결과값이 판별됩니다.<br /><br />
+                    💡 true와 false가 나오는 조건<br />
+                    ① true : "문자열", 숫자, [], {}<br />
+                    ② false : ""(빈문자열), 0, null, undefined
                 </p>
                 <pre><code>{
-    let x = 100;
-    let y = 200;
-    let z = "javascript";
-
-    console.log(x);
-    console.log(y);
-    console.log(z);
+    if ("조건") {
+        console.log("실행되었습니다.(true)");
+    } else {
+        console.log("실행되었습니다.(false)");
+    }
 }</code></pre>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            100<br />
-                            200<br />
-                            javascript
+                            실행되었습니다.(true)
                         </div>
                     </details>
                 </div>
             </div>
 
+            <div id="sample02" class="sample">
+                <h3>02. 다중 if문</h3>
+                <p>
+                    if문 다음에 else if라는 다중 if문을 사용할 경우 조건식과 맞는 결과값이 판별됩니다.<br />
+                    else if문에 마지막은 else만을 사용하여 끝내야합니다.
+                </p>
+                <pre><code>{
+    const num = 100;
+
+    if (num == 90) {
+        console.log("실행되었습니다.(90)");
+    } else if (num == 100) {
+        console.log("실행되었습니다.(100)");
+    } else if (num == 110) {
+        console.log("실행되었습니다.(110)");
+    } else if (num == 120) {
+        console.log("실행되었습니다.(120)");
+    } else if (num == 130) {
+        console.log("실행되었습니다.(130)");
+    } else {
+        console.log("실행되었습니다.");
+    }
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.(100)
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div id="sample03" class="sample">
+                <h3>03. 중첩 if문</h3>
+                <p>
+                    if문 다음에 if라는 중첩 if문을 사용할 경우 조건식과 맞는 결과값이 판별됩니다.<br />
+                    if문에 마지막은 else만을 사용하여 끝내야합니다.
+                </p>
+                <pre><code>{
+    const num = 100;
+
+    if (num == 100) {
+        console.log("실행되었습니다.1(100)");
+        if (num == 100) {
+            console.log("실행되었습니다.2(100)");
+        } if (num == 100) {
+            console.log("실행되었습니다.3(100)");
+        }
+    } else {
+        console.log("실행되었습니다.4");
+    }
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.1(100)<br />
+                            실행되었습니다.2(100)<br />
+                            실행되었습니다.3(100)
+                        </div>
+                    </details>
+                </div>
+            </div>
         </div>
 
         <!-- //main__sample-->
@@ -76,7 +157,151 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
+        // 01. if문(조건식)
+        {
+            // true --> "문자열", 숫자, [], {}
+            // false --> ""(빈문자열), 0, null, undefined
+            if ("조건") {
+                console.log("실행되었습니다.(true)");
+            } else {
+                console.log("실행되었습니다.(false)");
+            }
+        }
 
+        // 02. 다중 if문
+        {
+            const num = 100;
+
+            if (num == 90) {
+                console.log("실행되었습니다.(90)");
+            } else if (num == 100) {
+                console.log("실행되었습니다.(100)");
+            } else if (num == 110) {
+                console.log("실행되었습니다.(110)");
+            } else if (num == 120) {
+                console.log("실행되었습니다.(120)");
+            } else if (num == 130) {
+                console.log("실행되었습니다.(130)");
+            } else {
+                console.log("실행되었습니다.");
+            }
+        }
+
+        // 03. 중첩 if문
+        {
+            const num = 100;
+
+            if (num == 100) {
+                console.log("실행되었습니다.1(100)");
+                if (num == 100) {
+                    console.log("실행되었습니다.2(100)");
+                } if (num == 100) {
+                    console.log("실행되었습니다.3(100)");
+                }
+            } else {
+                console.log("실행되었습니다.4");
+            }
+        }
+
+        // 04. if문 생략 & 상황 연산자
+        {
+            const num = 100;
+            // 01
+            if (num == 100) {
+                console.log("true");
+            }
+
+            // 02
+            if (num == 100) console.log("true");
+
+            // 03
+            if (num == 100) {
+                console.log("true");
+            } else {
+                console.log("false");
+            }
+
+            // 04 상황 연산자(조건식 연산자) - 가장 많이 사용
+            num == 100 ? console.log("true") : console.log("false");
+        }
+
+        // 05. swith문
+        {
+            const num = 100;
+
+            switch (num) {
+                case 90:
+                    console.log("실행되었습니다.(90)");
+                    break;
+                case 95:
+                    console.log("실행되었습니다.(95)");
+                    break;
+                case 100:
+                    console.log("실행되었습니다.(100)");
+                    break;
+                case 105:
+                    console.log("실행되었습니다.(105)");
+                    break;
+                default:
+                    console.log("실행되었습니다.");
+            }
+        }
+
+        // 06. while문
+        {
+            let num = 1;                        // 초기값;
+
+            while (num <= 10) {                 // 조건식
+                console.log(num);               // 실행문;
+                num++;                          // 증감값;
+            }
+        }
+
+        // 07. do while문
+        {
+            let num = 1;                        // 초기값;
+
+            do {
+                console.log(num);               // 실행문;
+                num++;                          // 증감값;
+            } while (num <= 10);                // 조건식;
+        }
+
+        // 08. for문
+        {
+            for (let i = 1; i <= 10; i++) {     // 초기값; 조건식; 증감값
+                console.log(i);                 // 실행문;
+            }
+        }
+
+        // 09. 중첩 for문
+        {
+            console.log("09_________")
+            for (let i = 1; i <= 10; i++) {
+                for (let j = 1; j <= 10; j++) {
+                    console.log(i, j);
+                }
+            }
+        }
+        // 10. break문
+        {
+            for (let i = 1; i <= 10; i++) {
+                if (i == 5) {
+                    break;                      // 5에서 멈추기 때문에 1, 2, 3, 4만 나옴
+                }
+                console.log(i);
+            }
+        }
+
+        // 11. continue문
+        {
+            for (let i = 1; i <= 10; i++) {
+                if (i == 5) {
+                    continue;                   // 5는 생략하고 나머지가 나옴
+                }
+                console.log(i);
+            }
+        }
     </script>
 </body>
 
