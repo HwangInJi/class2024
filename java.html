@@ -10,24 +10,6 @@
 <body>
     <script>
         {
-            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-            const arrNum = arr.map((el) => {
-                return el + 50;
-            });
-
-            console.log(arrNum);
-        }
-
-        {
-            const arr = [100, 200, 300, 400, 500, 600, 700, 800];
-
-            for (let element in arr) {
-                console.log(element + " : " + arr[element]);
-            }
-        }
-
-        {
             const obj = {
                 a: 100,
                 b: 200,
@@ -39,135 +21,53 @@
         }
 
         {
-            const obj1 = {
-                a: 100,
-                b: 200,
-            };
-            const obj2 = {
-                c: 300,
-                d: 400,
-            };
-            const obj3 = Object.assign(obj1, obj2);
+            const numbers = [1, 2, 3, 4, 5];
 
-            console.log(obj3);
+            console.log(...numbers);    // 1 2 3 4 5
         }
 
         {
-            const obj1 = {
+            const obj = {
                 a: 100,
                 b: 200,
+                c: "javascript"
+            }
+            for (let el in obj) {
+                console.log(el + " : " + obj[el]);
+            }
+        }
+
+        {
+            const obj = {
+                a: 100,
+                b: { x: 200, y: 300 },
+                c: [400, 500, { x: 600, y: 700 }],
+                d: "javascript",
+                e: { x: "jquery" }
+            }
+            console.log();    // 100 
+            console.log();    // 200 
+            console.log();    // 300 
+            console.log();    // 400 
+            console.log(obj.c[1]);    // 500 
+            console.log(obj.c[2].x);    // 600 
+            console.log();    // 700 
+            console.log();    // javascript 
+            console.log();    // jquery 
+        }
+
+        {
+            const obj = {
+                a: 100,
+                b: [200, 300],
                 c: "javascript",
-            }
-            const obj2 = {
-                d: 300,
-                e: 400,
-                f: "jquery",
-            }
-            const obj3 = { ...obj1, ...obj2 }
-            const obj4 = { ...obj1, d: "jquery" }
-            const obj5 = { ...obj1, b: 300 }
-
-            console.log(obj3);
-            console.log(obj4);
-            console.log(obj5);
-        }
-
-        {
-            const obj1 = { a: 100, b: 200 }
-            const obj2 = { c: 300, d: 400 }
-            const merge1 = { ...obj1, ...obj2 };
-            const merge2 = { ...obj1, x: "javascript", ...obj2, y: "jquery" };
-
-            console.log(obj1);
-            console.log(merge1);
-            console.log(merge2);
-        }
-
-        {
-            const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-            //01
-            num.filter(function (element) {
-                console.log(element);
-            });
-
-            //02
-            num.filter(function (element, index) {
-                console.log(index);
-            });
-
-            //03
-            num.filter(function (element, index, array) {
-                console.log(array);
-            });
-
-            //04
-            const arr = num.filter(function (element) {
-                return element > 5;
-            });
-            console.log(arr);
-        }
-
-        {
-            const obj = {
-                a: 100,
-                b: 200,
-                c: "javascript"
-            }
-
-            console.log(Object.keys(obj));
-            console.log(Object.keys(obj)[0]);
-            console.log(Object.keys(obj)[1]);
-            console.log(Object.keys(obj)[2]);
-        }
-
-        {
-            const obj = {
-                a: 100,
-                b: 200,
-                c: "javascript"
-            }
-
-            console.log(Object.values(obj));
-        }
-        {
-            {
-                const obj1 = {
-                    a: 100,
-                    b: 200,
+                d: function () {
+                    console.log("javascript가 실행되었습니다.");
                 }
-                const obj2 = {
-                    c: 300,
-                    d: 400,
-                }
-                const obj3 = Object.assign(obj1, obj2);
-
-                console.log(obj3);
             }
-        }
 
-        {
-            // 02 기본값 설정
-            const obj = {
-                a: 100,
-                b: 200
-            }
-            const { a, b, c = "javascript" } = obj;
+            obj.d();                    // javascript가 실행되었습니다.
 
-            console.log(a);
-            console.log(b);
-            console.log(c);
-        }
-
-        {
-            const obj1 = { a: 100, b: 200 }
-            const obj2 = { c: 300, d: 400 }
-            const merge1 = { ...obj1, ...obj2 };
-            const merge2 = { ...obj1, x: "javascript", ...obj2, y: "jquery" };
-
-            console.log(obj1);
-            console.log(merge1);
-            console.log(merge2);
         }
     </script>
 </body>
