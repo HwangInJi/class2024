@@ -91,72 +91,152 @@
         "subject": "정보처리기능사",
         "num": "12",
         "date": "2005년 4회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "UNIX에서 파일을 삭제할 때 사용되는 명령어는?",
+        "question_desc": "rm : remove(제거)의 약자 입니다.",
+        "correct_answer": "rm"
     },
     {
         "subject": "정보처리기능사",
         "num": "13",
         "date": "2005년 4회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "Unix에서 주기억장치에 상주하여 프로세스 관리, 메모리관리, 파일 관리를 하는 것은?",
+        "question_desc": "주기억장치에 상주하며 핵심적인 일을 처리 하는것을 커널이라고 합니다.",
+        "correct_answer": "커널"
     },
     {
         "subject": "정보처리기능사",
         "num": "14",
         "date": "2005년 4회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "하나의 컴퓨터를 여러 사용자가 동시에 공동 이용하고 있어도 각 사용자가 마치 자기가 혼자서 컴퓨터를 독점하고 있는 것처럼 사용할 수 있는 기능은?",
+        "question_desc": "타임 쉐어링(Time Sharing)이라고도 하며, 시간을 조금씩 분할하여 실제로는 여러명이 사용하지만 혼자서 사용하는 것 처럼 느끼게 해주는 방식입니다.",
+        "correct_answer": "시분할 기능"
     },
     {
         "subject": "정보처리기능사",
         "num": "15",
         "date": "2005년 4회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "다음 중 광역통신망을 뜻하는 것은?",
+        "question_desc": "LAN(근거리통신망)-WAN(광역통신망)-MAN(도시형통신망)<br>ISDN : 종합정보통신망, VAN : 부가가치통신망",
+        "correct_answer": "WAN"
     },
     {
         "subject": "정보처리기능사",
         "num": "16",
         "date": "2005년 4회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "전자, 정전결합 등 전기적 결합에 의하여 서로 다른 회선에 영향을 주는 현상은?",
+        "question_desc": "누화 - 전지,정전결합 등의 결함<br>감쇠 - 에너지,입자 등의 결함<br>위상 왜곡 - 음향,오디오 등의 결함<br>비선형 왜곡 - 높은 PAPR 특성으로 인해 발생",
+        "correct_answer": "누화"
     },
     {
         "subject": "정보처리기능사",
         "num": "17",
         "date": "2005년 4회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "관계 데이터베이스에서 하나의 애트리뷰트가 취할 수 있는 같은 타입의 모든 원자값들의 집합을 무엇이라고 하는가?",
+        "question_desc": "도메인(Domain) : 하나의 속성(애트리뷰트)가 취할수 있는 속성값들의 집합",
+        "correct_answer": "도메인"
     },
     {
         "subject": "정보처리기능사",
         "num": "18",
-        "date": "2005년 4회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "date": "2021년 2회",
+        "question": "다음의 설명하는 내용을 작성하시오.<br>릴레이션의 튜플은 ( ① )의 모임으로 구성된다.<br>이러한 ( ① )의 개수를 ( ② )라고 한다.",
+        "question_desc": "릴레이션의 튜플은 속성, 속성의 개수를 차수라고 합니다.",
+        "correct_answer": "속성, 차수"
     },
     {
         "subject": "정보처리기능사",
         "num": "19",
-        "date": "2005년 4회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "date": "2021년 3회",
+        "question": "테이블을 이미 생성하였거나 존재하는 경우, 이에 필드의 추가 및 삭제 등의 변경을 할 수 있도록 도와주는 명령어는?",
+        "question_desc": "ALTER는 필드의 추가 및 삭제 등의 변경이 가능한 명령어입니다.",
+        "correct_answer": "ALTER"
     },
     {
         "subject": "정보처리기능사",
         "num": "20",
-        "date": "2005년 4회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "date": "2005년 5회",
+        "question": "모든 입력이 1일 때만 출력이 1이 되고, 입력이 하나라도 0이면 출력은 0이 되는 게이트(Gate)는?",
+        "question_desc": "모든 입력이 1이이여 1이 출력된다는 말은 둘다 참이어야 참이므로 AND 입니다.",
+        "correct_answer": "AND"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "21",
+        "date": "2005년 5회",
+        "question": "하나의 레지스터에 기억된 자료를 모두 다른 레지스터로 옮길 때 사용하는 논리 연산은?",
+        "question_desc": "한자리씩 이동이라면 Rotate 또는 shift 이지만 전체를 다른곳으로 이동한다고 하였으므로 Move 입니다.",
+        "correct_answer": "move"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "22",
+        "date": "2005년 5회",
+        "question": "명령어 내의 오퍼랜드가 지정한 곳에 실제 데이터 값이 기억된 장소를 지정하는 방식으로, 피 연산자를 구하기 위하여 두 번의 기억장소 접근을 해야 하는 방식은?",
+        "question_desc": "문제에서 두번의 기억장소 접근을 해야 한다고 했으므로 간접주소 방식 입니다. 간접주소는 메모리를 2회 참조합니다.",
+        "correct_answer": "간접주소"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "23",
+        "date": "2005년 5회",
+        "question": "원격지에 설치된 입·출력장치를 무엇이라 하는가?",
+        "question_desc": "단말장치 : 원격지에 설치된 입출력장치",
+        "correct_answer": "단말장치"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "24",
+        "date": "2005년 5회",
+        "question": "주소 10에 20이란 값이 지정되어 있고, 주소 20에는 40이라는 값이 저장되어 있다고 할 때 간접 주소 지정에 의해 10번지를 액세스하면 실제 꺼내지는 값은?",
+        "question_desc": "간접주소는 메모리를 두번 참조하기 때문에 먼저 10이라는 근거를 통해서 10번지에 가보면 20이란 데이터가 있고, 다시 20번지에 가보면 실제 데이터인 40이 들어 있습니다.",
+        "correct_answer": "40"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "25",
+        "date": "2005년 5회",
+        "question": "현재 실행중인 명령어를 기억하고 있는 제어장치 내의 레지스터는?",
+        "question_desc": "현재 실행중인 명령어는 IR(명령어 제지스터)에 저장되면 다음 수행 명령 번지는 PC(프로그램 카운터)에 저장 됩니다.",
+        "correct_answer": "명령어 레지스터"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "26",
+        "date": "2005년 5회",
+        "question": "제어장치, 출력장치, 연산장치, 레지스터 중 마이크로프로세서의 구성에 해당하지 않는 것은?",
+        "question_desc": "마이크로 프로세서란 연산,제어,(기억,레지스터) 장치를 하나의 칩에 넣어 놓은것을 말합니다.",
+        "correct_answer": "출력장치"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "27",
+        "date": "2005년 5회",
+        "question": "어떤 릴레이션 R의 정의에서 에트리뷰트의 개수를 무엇이라 하는가?",
+        "question_desc": "애트리뷰트의 갯수를 차수(Degree) 라고 하며 튜플의 갯수를 기수(Cadinality) 라고 합니다.",
+        "correct_answer": "차수"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "28",
+        "date": "2005년 5회",
+        "question": "데이터베이스 제어어(DCL) 중 사용자에게 조작에 대한 권한을 부여하는 명령어는?",
+        "question_desc": "DCL(제어어) : GRANT(권한부여), REVOKE(권한 해제), COMMIT(변경반영), ROLLBACK(변경 취소)",
+        "correct_answer": "GRANT"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "29",
+        "date": "2005년 5회",
+        "question": "DBMS의 필수 기능 3가지는?",
+        "question_desc": "DBMS의 필수 기능은 DDL(정의어), DML(조작어), DCL(제어어)입니다.",
+        "correct_answer": "정의, 조작, 제어"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "30",
+        "date": "2005년 5회",
+        "question": "컴퓨터 시스템을 구성하고 있는 하드웨어 장치와 일반 컴퓨터 사용자 또는 컴퓨터에서 실행되는 응용 프로그램의 중간에 위치하여 사용자들이 보다 쉽고 간편하게 컴퓨터 시스템을 이용할 수 있도록 제어 관리하는 프로그램?",
+        "question_desc": "운영체제란 컴퓨터 하드웨어와 사용자 사이에서 사용자가 컴퓨터를 원활히 사용할수 있도록 도와주는 프로그램을 말합니다.",
+        "correct_answer": "운영체제"
     },
 ]
