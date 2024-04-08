@@ -59,13 +59,37 @@
         "subject": "정보처리기능사",
         "num": "08",
         "date": "2005년 4회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "명령어 형식 중 주소 부분이 없이 연산자만 존재하는 형식은?",
+        "question_desc": "주소 부분이 없다는 뜻은 주소가 0 이라는 말입니다.",
+        "correct_answer": "0-주소 형식"
     },
     {
         "subject": "정보처리기능사",
         "num": "09",
+        "date": "2005년 4회",
+        "question": "스프레드시트 작업에서 반복되거나 복잡한 단계를 수행하는 작업을 일괄적으로 자동화시켜 실행하는 기능은?",
+        "question_desc": "반복되는 작업을 일괄적으로 자동처리 시킬수 있는 기능은 매크로 입니다.",
+        "correct_answer": "매크로"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "10",
+        "date": "2005년 4회",
+        "question": "SQL문에서 검색결과에 대한 레코드의 중복을 제거하기 위해 사용하는 명령은?",
+        "question_desc": "DISTINCT : 중복 제거",
+        "correct_answer": "DISTINCT"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "11",
+        "date": "2005년 4회",
+        "question": "UNIX에서 현재 작업중인 디렉토리의 모든 파일을 보여주는 명령은?",
+        "question_desc": "ls : 파일목록을 보여줌(list의 약자 입니다.)<br />※pwd : 현재 작업중인 경로",
+        "correct_answer": "ls"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "12",
         "date": "2005년 4회",
         "question": "",
         "question_desc": "",
@@ -73,7 +97,63 @@
     },
     {
         "subject": "정보처리기능사",
-        "num": "10",
+        "num": "13",
+        "date": "2005년 4회",
+        "question": "",
+        "question_desc": "",
+        "correct_answer": ""
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "14",
+        "date": "2005년 4회",
+        "question": "",
+        "question_desc": "",
+        "correct_answer": ""
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "15",
+        "date": "2005년 4회",
+        "question": "",
+        "question_desc": "",
+        "correct_answer": ""
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "16",
+        "date": "2005년 4회",
+        "question": "",
+        "question_desc": "",
+        "correct_answer": ""
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "17",
+        "date": "2005년 4회",
+        "question": "",
+        "question_desc": "",
+        "correct_answer": ""
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "18",
+        "date": "2005년 4회",
+        "question": "",
+        "question_desc": "",
+        "correct_answer": ""
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "19",
+        "date": "2005년 4회",
+        "question": "",
+        "question_desc": "",
+        "correct_answer": ""
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "20",
         "date": "2005년 4회",
         "question": "",
         "question_desc": "",
