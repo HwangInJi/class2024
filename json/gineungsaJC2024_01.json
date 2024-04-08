@@ -1,0 +1,82 @@
+[
+    {
+        "subject": "정보처리기능사",
+        "num": "01",
+        "date": "2020년 4회",
+        "question": "IP, ARP, ICMP, IGMP와 프로토콜과 관련이 있는 OSI 계층은?",
+        "question_desc": "IP, ARP, ICMP, IGMP은 네트워크 계층과 관련 있는 프로토콜이다.",
+        "correct_answer": "네트워크 계층"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "02",
+        "date": "2020년 3회",
+        "question": "phone이라는 새로운 열(Column)을 추가하기 위해 써야 하는 명령문은?<br />ALTER TABLE customer ( ① ) phone varchar(255)",
+        "question_desc": "추가하는 의미의 명령문은 ADD이다.",
+        "correct_answer": "ADD"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "03",
+        "date": "2005년 4회",
+        "question": "EBCDIC 코드는 몇 개의 Zone Bit를 갖는가?",
+        "question_desc": "EBCDIC 코드는 총 8비트 코드를 갖고 있으면 4개의 Zone Bit를 갖고 있다.",
+        "correct_answer": "4"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "04",
+        "date": "2005년 4회",
+        "question": "보수 연산, 쉬프트 연산, 로테이트 연산, 논리곱(AND) 연산 중 이항(Binary) 연산에 해당하는 것은?",
+        "question_desc": "단항연산자 종류 : move, shift, rotate, not(complement) 입니다.이항 연산자란 항이 2개 인것을 말합니다.",
+        "correct_answer": "논리곱(AND) 연산"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "05",
+        "date": "2005년 4회",
+        "question": "RS Flip-Flop에서 CP=1이고 S=0, R=0 이면 출력 Q의 상태는?",
+        "question_desc": "S(set)=0이고 R(reset)=0 이므로 셋팅과 리셋 모두 하지 말라는 뜻입니다. 그러므로 아무것도 변하는게 없으므로 불변상태 입니다.",
+        "correct_answer": "불변 상태"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "06",
+        "date": "2005년 4회",
+        "question": "시프트레지스터, 누산기, B레지스터, D레지스터 중 클록펄스(Clock Pulse)에 의해서 기억 내용을 한자리씩 이동하는 레지스터는?",
+        "question_desc": "한자리씩 이동은 shift 회전은 rotate입니다.",
+        "correct_answer": "시프트레지스터"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "07",
+        "date": "2005년 4회",
+        "question": "정보검색 엔진에서 AND, OR, NOT 과 같은 연산자가 사용되는데 이 연산자를 무슨 연산자라 하는가?",
+        "question_desc": "and, or, not 을 논리 연산자라고도 하며 부울 연산자 라고도합니다.",
+        "correct_answer": "부울 연산자"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "08",
+        "date": "2005년 4회",
+        "question": "",
+        "question_desc": "",
+        "correct_answer": ""
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "09",
+        "date": "2005년 4회",
+        "question": "",
+        "question_desc": "",
+        "correct_answer": ""
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "10",
+        "date": "2005년 4회",
+        "question": "",
+        "question_desc": "",
+        "correct_answer": ""
+    },
+]
