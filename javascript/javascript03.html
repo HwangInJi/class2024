@@ -833,8 +833,7 @@
             <div id="sample23" class="sample">
                 <h3>23. 함수 : 콜백 함수</h3>
                 <p>
-                    1. 예시는 이벤트 리스너를 통해 주석 처리된 코드 함수 "// btn.addEventListener("click", func);"를 실행하는 예제를 보여주려는 것으로,
-                    이벤트가 발생했을 때 func 함수를 실행하는 코드입니다.<br />
+                    1. 예시는 이벤트 리스너를 통해 주석 처리된 코드 함수 "// btn.addEventListener("click", func);"를 실행하는 것으로, 이벤트가 발생했을 때 func 함수를 실행하는 코드입니다.<br />
                     2. 예시는 func1이라는 함수와 func2라는 함수가 정의되어 있고, func2 함수는 콜백 함수(callback)를 인자로 받아 실행하는 역할을 합니다.<br />
                     여기서 func1 함수를 func2 함수의 인자로 전달하여 호출하고 있기 때문에 결과값은 func1 함수 내의 메시지가 출력됩니다.<br />
                     3. 예시는 func3라는 이름의 함수와 func4라는 함수가 정의되어 있고, func3 함수는 인자로 전달받은 숫자와 함께 메시지를 출력합니다.<br />
@@ -893,39 +892,68 @@
             <div id="sample24" class="sample">
                 <h3>24. 함수 : 비동기 방식 : 콜백 함수</h3>
                 <p>
-
+                    1. 예시에서 func1과 func2 함수는 즉시 실행되며, func1이 먼저 실행되고 그 후에 func2가 순차적으로 실행됩니다.<br />
+                    2. 예시는 func3 함수는 setTimeout을 사용하여 1초 후에 결과값이 실행되는 비동기적인 호출로 설정하였습니다.<br />
+                    반면, func4 함수는 즉시 실행되도록 설정했기 때문에 func4가 먼저 실행되고, 1초 후에 func3가 실행됩니다.<br />
+                    3. 예시는 콜백 함수를 사용하여 비동기적인 동작을 조절하는 방법으로 func5 함수는 콜백 함수를 인자로 받아서 1초 후에 실행함과 동시에 func6 함수는 func5 함수의 콜백으로 전달되어 있습니다.<br />
+                    따라서 func5를 호출하면 1초 후에 "33. 함수가 실행되었습니다."가 출력되고, 이어서 func6가 실행되어 "34. 함수가 실행되었습니다."가 출력됩니다.<br /><br />
+                    
+                    💡 동기 : 작업이 위에서 아래로 순차적 진행 + 하나의 작업이 끝나야 다음 작업 시작<br />
+                    💡 비동기 : 작업이 순서와 관계없이 여러 작업 처리 가능 (콜백함수, 프로미스, async/await 사용) + 하나의 작업 완료 대기없이 다른 작업 시작 가능
                 </p>
                 <pre><code>{
-    // 함수 정의
-    function Func(num, str) {
-        this.num = num;
-        this.str = str;
+    // 01 동기적인 함수 호출
+    function func1() {
+        console.log("29. 함수가 실행되었습니다.")
     }
+    function func2() {
+        console.log("30. 함수가 실행되었습니다.")
+    }
+    func1();
+    func2();
 
-    // 메서드 추가 - 추가된 메서드가 많아지면서 객체 리터럴을 통해 그룹화
-    Func.prototype = {
-        result1: function () {
-            console.log(`${this.num}. ${this.str}`);
-        },
-        result2: function () {
-            console.log(`${this.num}. ${this.str}`);
+    // 02 비동기적인 함수 호출
+    function func3() {
+        setTimeout(() => {
+            console.log("31. 함수가 실행되었습니다.");
+        }, 1000)
+    }
+    function func4() {
+        console.log("32. 함수가 실행되었습니다.");
+    }
+    func3();
+    func4();
+
+    // 03 콜백함수 비동기 호출
+    {
+        function func5(callback) {
+            setTimeout(() => {
+                console.log("33. 함수가 실행되었습니다.");
+                callback();
+            }, 1000);
         }
+        function func6() {
+            console.log("34. 함수가 실행되었습니다.");
+        }
+
+        func5(function () {
+            func6();
+        });
     }
-
-    // 인스턴스 생성
-    const info1 = new Func(23, "함수가 실행되었습니다.");
-    const info2 = new Func(24, "함수가 실행되었습니다.");
-
-    // 호출
-    info1.result1();
-    info2.result2();
 }</code></pre>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            23. 함수가 실행되었습니다.<br />
-                            24. 함수가 실행되었습니다.
+                            01.<br />
+                            29. 함수가 실행되었습니다.<br />
+                            30. 함수가 실행되었습니다.<br /><br />
+                            02.<br />
+                            32. 함수가 실행되었습니다.<br />
+                            31. 함수가 실행되었습니다.<br /><br />
+                            03.<br />
+                            33. 함수가 실행되었습니다.<br />
+                            34. 함수가 실행되었습니다.
                         </div>
                     </details>
                 </div>
@@ -935,7 +963,7 @@
             <div id="sample25" class="sample">
                 <h3>25. 함수 : 비동기 방식 : 프로미스</h3>
                 <p>
-
+                    (미학습)
                 </p>
                 <pre><code>{
     // 함수 정의
@@ -980,36 +1008,50 @@
 
                 </p>
                 <pre><code>{
-    // 함수 정의
-    function Func(num, str) {
-        this.num = num;
-        this.str = str;
+    // 01 일반적인 함수(동기방식)
+    function func() {
+        console.log("35. 함수가 실행되었습니다.");
     }
+    func();
 
-    // 메서드 추가 - 추가된 메서드가 많아지면서 객체 리터럴을 통해 그룹화
-    Func.prototype = {
-        result1: function () {
-            console.log(`${this.num}. ${this.str}`);
-        },
-        result2: function () {
-            console.log(`${this.num}. ${this.str}`);
+    // 02 함수(동기방식)
+    async function func2() {
+        console.log("36. 함수가 실행되었습니다.");
+    }
+    func2();
+
+    // 03 비동기방식(fetch())
+    async function func3() {
+        const result = await fetch("https://hwanginji.github.io/class2024/json/gineungsaJC2005_02.json");
+        const data = await result.json();
+        console.log(data);
+    }
+    func3();
+
+    // 04 비동기 + 에러
+    async function func4() {
+        try {
+            const result = await fetch("https://hwanginji.github.io/class2024/json/gineungsaJC2005_02.json");
+            const data = await result.json();
+            console.log(data);
+        } catch (error) {
+            console.error(error);
         }
     }
-
-    // 인스턴스 생성
-    const info1 = new Func(23, "함수가 실행되었습니다.");
-    const info2 = new Func(24, "함수가 실행되었습니다.");
-
-    // 호출
-    info1.result1();
-    info2.result2();
+    func4();
 }</code></pre>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-                            23. 함수가 실행되었습니다.<br />
-                            24. 함수가 실행되었습니다.
+                            01.<br />
+                            35. 함수가 실행되었습니다.<br /><br />
+                            02.<br />
+                            36. 함수가 실행되었습니다.<br /><br />
+                            03.<br />
+                            Array(60)<br /><br />
+                            04.<br />
+                            Array(60)
                         </div>
                     </details>
                 </div>
@@ -1019,7 +1061,7 @@
             <div id="sample27" class="sample">
                 <h3>27. 함수 : 중첩 함수</h3>
                 <p>
-
+                    (미학습)
                 </p>
                 <pre><code>{
     // 함수 정의
@@ -1061,7 +1103,7 @@
             <div id="sample28" class="sample">
                 <h3>// 28. 함수 : 클로저</h3>
                 <p>
-
+                    (미학습)
                 </p>
                 <pre><code>{
     // 함수 정의
@@ -1357,19 +1399,19 @@
 
             // 03 콜백함수 비동기 호출
             {
-                // function func5(callback) {
-                //     setTimeout(() => {
-                //         console.log("33. 함수가 실행되었습니다.");
-                //         callback();
-                //     }, 1000);
-                // }
-                // function func6() {
-                //     console.log("34. 함수가 실행되었습니다.");
-                // }
+                function func5(callback) {
+                    setTimeout(() => {
+                        console.log("33. 함수가 실행되었습니다.");
+                        callback();
+                    }, 1000);
+                }
+                function func6() {
+                    console.log("34. 함수가 실행되었습니다.");
+                }
 
-                // func5(function () {
-                //     func6();
-                // });
+                func5(function () {
+                    func6();
+                });
             }
         }
 
