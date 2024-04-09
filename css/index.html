@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(to bottom, rgba(1, 141, 210, 0.63), transparent);
+        }
+
+        div[class^="bubble-"] {
+            width: 1px;
+            height: 1px;
+            background-color: rgba(1, 141, 210, 0.3);
+            border-radius: 50%;
+            position: absolute;
+            bottom: 6px;
+            animation-name: bubble-move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        div[class^="bubble-"]::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            width: 85%;
+            height: 85%;
+            border-top: 1px solid rgba(255, 255, 255, 1);
+            border-radius: 50%;
+        }
+
+        .bubble-1 {
+            left: 10%;
+            animation-delay: 1000ms;
+        }
+
+        .bubble-2 {
+            left: 14%;
+            animation-delay: 300ms;
+        }
+
+        .bubble-3 {
+            left: 29%;
+            animation-delay: 500ms;
+        }
+
+        .bubble-4 {
+            left: 39%;
+            animation-delay: 4500ms;
+        }
+
+        .bubble-5 {
+            left: 83%;
+            animation-delay: 3300ms;
+        }
+
+        .bubble-6 {
+            left: 74%;
+            animation-delay: 1700ms;
+        }
+
+        .bubble-7 {
+            left: 63%;
+            animation-delay: 330ms;
+        }
+
+        .bubble-8 {
+            left: 57%;
+            animation-delay: 7400ms;
+        }
+
+        .bubble-9 {
+            left: 12%;
+            animation-delay: 600ms;
+        }
+
+        .bubble-10 {
+            left: 40%;
+            animation-delay: 2500ms;
+        }
+
+        .bubble-11 {
+            left: 85%;
+            animation-delay: 460ms;
+        }
+
+        .bubble-12 {
+            left: 32%;
+            animation-delay: 2900ms;
+        }
+
+        .bubble-13 {
+            left: 22%;
+            animation-delay: 2700ms;
+        }
+
+        .bubble-14 {
+            left: 26%;
+            animation-delay: 6600ms;
+        }
+
+        .bubble-15 {
+            left: 34%;
+            animation-delay: 940ms;
+        }
+
+        .bubble-16 {
+            left: 72%;
+            animation-delay: 1300ms;
+        }
+
+        .bubble-17 {
+            left: 58%;
+            animation-delay: 1900ms;
+        }
+
+        .bubble-18 {
+            left: 24%;
+            animation-delay: 1630ms;
+        }
+
+        .bubble-19 {
+            left: 77%;
+            animation-delay: 1950ms;
+        }
+
+        .bubble-20 {
+            left: 17%;
+            animation-delay: 8500ms;
+        }
+
+        @keyframes bubble-move {
+            0% {
+                width: 1px;
+                height: 1px;
+                transform: translateY(0);
+            }
+
+            100% {
+                width: 75px;
+                height: 75px;
+                transform: translateY(-1200%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bubble-1"></div>
+        <div class="bubble-2"></div>
+        <div class="bubble-3"></div>
+        <div class="bubble-4"></div>
+        <div class="bubble-5"></div>
+        <div class="bubble-6"></div>
+        <div class="bubble-7"></div>
+        <div class="bubble-8"></div>
+        <div class="bubble-9"></div>
+        <div class="bubble-10"></div>
+
+        <div class="jelly-wrapper">
+            <div class="jelly-hair"></div>
+            <div class="jelly-body">
+                <div class="jelly-inner">
+                    <div class="jelly-eye"></div>
+                    <div class="jelly-mouth"></div>
+                    <div class="jelly-hand"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bubble-11"></div>
+        <div class="bubble-12"></div>
+        <div class="bubble-13"></div>
+        <div class="bubble-14"></div>
+        <div class="bubble-15"></div>
+        <div class="bubble-16"></div>
+        <div class="bubble-17"></div>
+        <div class="bubble-18"></div>
+        <div class="bubble-19"></div>
+        <div class="bubble-20"></div>
+    </div>
+</body>
+
+</html>

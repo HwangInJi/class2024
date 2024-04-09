@@ -64,3 +64,7 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 
 ### 포트폴리오 관련 참고   
 [포트폴리오 참고](https://github.com/webstoryboy/studyPORT?tab=readme-ov-file)   
+
+### 단축키 관련
+[cheat-sheet](https://docs.emmet.io/cheat-sheet/)   
+[백그라운드 속성](https://webzz.tistory.com/380)   
