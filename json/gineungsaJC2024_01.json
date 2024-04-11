@@ -323,80 +323,480 @@
         "subject": "정보처리기능사",
         "num": "41",
         "date": "2006년 1회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "프레젠테이션에서 프레젠테이션의 한 화면을 구성하는 개개의 요소들을 무엇이라 하는가?",
+        "question_desc": "한 화면은 슬라이더지만 한 화면을 구성하는 개개의 요소는 개체(Object)입니다.",
+        "correct_answer": "개체"
     },
     {
         "subject": "정보처리기능사",
         "num": "42",
         "date": "2006년 1회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "SQL에서 변경된 내용을 데이터베이스에 저장할 때 사용되는 처리문은?",
+        "question_desc": "변경 내용을 실제로 저장한다는 뜻은 변경 내용을 데이터 베이스에 반영 한다는 말과 같으므로 COMMIT 입니다.",
+        "correct_answer": "COMMIT"
     },
     {
         "subject": "정보처리기능사",
         "num": "43",
         "date": "2006년 1회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "프로세스 스케줄링 방법 중 가장 먼저 CPU를 요청한 프로세스에게 가장 먼저 CPU를 할당하여 실행 할 수 있게 하는 방법은?",
+        "question_desc": "먼저 요청한 것을 먼저 처리 하므로 먼저 들어온 것이 먼저 나간다는 뜻인 FIFO(FIRST IN FIRST OUT)입니다. FIFO는 '선입선출' 이라고도 합니다.",
+        "correct_answer": "FIFO"
     },
     {
         "subject": "정보처리기능사",
         "num": "44",
         "date": "2006년 1회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "음성 대역을 다중화할 때 음성 채널 12개를 묶어 무엇이라 하는가?",
+        "question_desc": "음성채널 12개를 묶어서 '베이스그룹(BG)'이라고 합니다.",
+        "correct_answer": "베이스그룹(BG)"
     },
     {
         "subject": "정보처리기능사",
         "num": "45",
         "date": "2006년 1회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "한 바이트를 8개의 비트로 분리해서 한번에 한 비트씩 순서적으로 선로를 통해 전송하는 방식은?",
+        "question_desc": "1비트식 순서적으로 보내는 방식이므로 '직렬 전송'입니다. 8비트를 한꺼번에 전송하는 건 '병렬 전송'입니다.",
+        "correct_answer": "직렬 전송"
     },
     {
         "subject": "정보처리기능사",
         "num": "46",
         "date": "2006년 1회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "일정량의 자료를 모은 후에 처리하는 방법을 무엇이라 하는가?",
+        "question_desc": "일괄 처리(Batch Processing) : 일정량의 자료를 모아서 한꺼번에 처리 하는 방식으로 월급, 성적처리 등 실시간 처리가 필요없는 경우에 사용합니다.",
+        "correct_answer": "일괄 처리"
     },
     {
         "subject": "정보처리기능사",
         "num": "47",
         "date": "2006년 1회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "커넥터, 허브, 라우터, 브리지 중 컴퓨터 네트워크와 정보통신 시스템을 상호 연결하는 접속 장비가 아닌 것은?",
+        "question_desc": "커넥터는 시스템을 상호 연결하는 장비가 아닙니다.",
+        "correct_answer": "커넥터"
     },
     {
         "subject": "정보처리기능사",
         "num": "48",
         "date": "2006년 1회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "question": "데이터베이스 구성 요소들의 상호 관계를 논리적으로 정의한 것으로 데이터의 구조와 제약 조건에 대해 기술한 것은?",
+        "question_desc": "스키마 : 데이터베이스에 대한 각종 정의 및 제약 조건에 관하여 기술해 놓은 것",
+        "correct_answer": "스키마"
     },
     {
         "subject": "정보처리기능사",
         "num": "49",
-        "date": "2006년 1회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "date": "2006년 2회",
+        "question": "입력된 2개의 값들 중에서 어느 것이라도 참 값을 가지고 있으면 참이라는 결과를 출력하는 논리 연산자는?",
+        "question_desc": "둘중 하나라도 참이면 참이므로 OR 입니다.<br>NAND 게이트는 두 개의 입력(A와 B)을 받아들이고, 두 입력이 모두 참(true)이면(false), 결과로 거짓(false)을 출력하며, 그 외에는 참(true)을 출력합니다.",
+        "correct_answer": "OR"
     },
     {
         "subject": "정보처리기능사",
         "num": "50",
-        "date": "2006년 1회",
-        "question": "",
-        "question_desc": "",
-        "correct_answer": ""
+        "date": "2006년 2회",
+        "question": "연산 후 입력 자료가 변하지 않고 보존되는 특징의 장점을 갖는 주소 형식은?",
+        "question_desc": "3주소 : 연산후 입력 자료가 변하지 않음 , 2주소 : 연산후 입력 자료가 변함",
+        "correct_answer": "3-주소 형식"
     },
+    {
+        "subject": "정보처리기능사",
+        "num": "51",
+        "date": "2006년 2회",
+        "question": "출력 장치와 주기억 장치 사이에 위치하여 데이터 처리 속도의 차이를 줄이는데 도움이 되는 장치는?",
+        "question_desc": "입출력 장치와 주기억 장치 사이에 위치한 것은 입출력 채널입니다.",
+        "correct_answer": "입출력 채널"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "52",
+        "date": "2006년 2회",
+        "question": "입출력 장치의 동작 속도와 전자계산기 내부의 동작 속도를 맞추는데 사용되는 레지스터는?",
+        "question_desc": "서로 다른 속도를 보완하기 위하여 사용하는 장치를 버퍼라고 합니다.",
+        "correct_answer": "버퍼 레지스터"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "53",
+        "date": "2006년 2회",
+        "question": "연산 결과를 일시적으로 기억하는 장치를 무엇이라고 하는가?",
+        "question_desc": "누산기(ACC) : 연산결과 일시 저장(연산속도 향상)",
+        "correct_answer": "누산기"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "54",
+        "date": "2006년 2회",
+        "question": "특정한 장치에서 사용되는 정보를 다른 곳으로 전송하기 위하여 일정한 규칙에 따라 암호로 변환하는 장치는?",
+        "question_desc": "부호기(Encoder) : 암호화기라고도 하며 10진수로 2진수로 변환 합니다.",
+        "correct_answer": "부호기"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "55",
+        "date": "2006년 2회",
+        "question": "제어논리장치(CLU)와 산술논리연산장치(ALU)의 실행 순서를 제어하기 위해 사용되는 레지스터는?",
+        "question_desc": "각종 상태를 나타내고 있는 플래그 레지스터(Flag Register)를 기준으로 제어를 합니다.",
+        "correct_answer": "플래그 레지스터"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "56",
+        "date": "2006년 2회",
+        "question": "테이블에서 각 레코드를 식별할 수 있는 유일한 값을 갖는 필드를 무엇이라 하는가?",
+        "question_desc": "기본키 : 레코드를 식별할수 있는 유일한 값을 갖는 필드들중 가장 으뜸인 키를 기본키라고 합니다.",
+        "correct_answer": "기본키"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "57",
+        "date": "2006년 2회",
+        "question": "프레젠테이션에서 사용하는 하나의 화면을 의미하는 것은?",
+        "question_desc": "프리젠테이션의 기본 단위는 슬라이드, 스프레드시트의 기본단위는 셀 입니다.",
+        "correct_answer": "슬라이드"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "58",
+        "date": "2006년 2회",
+        "question": "괄호에 들어갈 SQL문의 형식은?<br />INSERT - ( ) - ( )",
+        "question_desc": "INSERT 다음에는 INTO - VALUES 순으로 SQL형식을 만들어야 합니다.",
+        "correct_answer": "INTO, VALUES"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "59",
+        "date": "2006년 2회",
+        "question": "SQL에서 데이터베이스에 대한 일련의 처리를 하나로 모은 작업단위로 관리할 수 있다. 이 작업 단위를 무엇이라고 하는가?",
+        "question_desc": "데이터베이스의 작업의 최소 단위는 트랜잭션 단위 입니다.",
+        "correct_answer": "트랜잭션"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "60",
+        "date": "2006년 2회",
+        "question": "SQL에서 기본테이블을 생성하는 명령은?",
+        "question_desc": "CREATE : 데이터베이스, 테이블, 뷰 생성 명령어",
+        "correct_answer": "CREATE"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "61",
+        "date": "2006년 2회",
+        "question": "기업체의 발표회나 각종 회의 등에서 빔 프로젝트 등을 이용하여 제품에 대한 소개나 회의 내용을 요약 정리하여 청중에게 효과적으로 전달하기 위한 도구를 의미하는 것은?",
+        "question_desc": "발표회등에 가장 적당한 것은 프리젠테이션 입니다. 대표적으로 파워포인트라는 프로그램이 있습니다.",
+        "correct_answer": "프레젠테이션"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "62",
+        "date": "2006년 2회",
+        "question": "현재의 작업 디렉토리를 나타내기 위한 UNIX 명령어는?",
+        "question_desc": "pwd : 현재 작업경로 표시",
+        "correct_answer": "pwd"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "63",
+        "date": "2006년 2회",
+        "question": "쉘, 유틸리티, 포트, 커널 중 UNIX의 구성요소를 크게 세 부분으로 나눌 때 이에 해당되지 않는 것은?",
+        "question_desc": "유닉스 구성의 3요소 : 커널, 쉘, 유틸리티 입니다.",
+        "correct_answer": "포트"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "64",
+        "date": "2006년 2회",
+        "question": "사용자의 편의를 위해 사용 빈도가 높은 프로그램을 시스템 제공자가 미리 작성하여 사용자에게 제공해 주는 처리 프로그램은?",
+        "question_desc": "서비스(Service) 프로그램 : 사용자 편의를 위하여 시스템 제공자가 미리 작성하여 제공해 주는 프로그램",
+        "correct_answer": "서비스 프로그램"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "65",
+        "date": "2006년 2회",
+        "question": "보(Baud) 속도가 1,600[baud]이며 트리비트(Tribit)를 사용하는 경우의 속도는?",
+        "question_desc": "원(1), 디(2), 트리(3), 쿼드(4) 입니다. 트리비트 이므로 곱하기 3을 해주면 됩니다.",
+        "correct_answer": "4,800[bps]"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "66",
+        "date": "2006년 2회",
+        "question": "준비상태(Ready)에 있는 프로세스들 중에서 우선순위가 가장 높은 프로세스를 선택하여 CPU를 할당(Running 상태)하는 것을 무엇이라 하는가?",
+        "question_desc": "우선순위가 가장 높은 프로세스를 선택하여 CPU를 할당(Running 상태)하는 것을 디스패치라고 합니다.",
+        "correct_answer": "디스페치"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "67",
+        "date": "2006년 2회",
+        "question": "FDM, COM, TDM, WDM 중 다중화 방식의 종류에 해당되지 않는 것은?",
+        "question_desc": "1. FDM(Frequency Division Multiplexing): 주파수 분할 다중화<br>2. TDM(Time Division Multiplexing): 시 분할 다중화<br>4. WDM(Wavelength Division Multiplexing): 파장 분할 다중화",
+        "correct_answer": "COM"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "68",
+        "date": "2010년 2회",
+        "question": "연속되는 2개의 숫자를 표현한 코드에서 한 개의 비트를변경하면 새로운 코드가 되기 때문에 아날로그-디지털 변환, 데이터 전송 등에 주로 사용되는 코드는?",
+        "question_desc": "Gray Code는 입출력변환할 때, 아날로그와 디지털 변환할때 사용하는 코드입니다.",
+        "correct_answer": "그레이 코드"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "69",
+        "date": "2010년 2회",
+        "question": "1비트(bit)를 기억할 수 있는 능력을 가진 기억의 최소 단위로 클록이 있는 순서회로에 기억된 기억 소자는?",
+        "question_desc": "전가산기, 반가산기, 부호기, 멀티플렉서 등은 조합논리회로입니다.",
+        "correct_answer": "플립플롭"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "70",
+        "date": "2010년 2회",
+        "question": "기억된 내용을 읽을 수만 있고, 전원이 차단되어도 기억된 내용이 소멸되지 않는 것은?",
+        "question_desc": "ROM은 Read Only Memory의 약자로 읽기만 가능하다는 뜻입니다.",
+        "correct_answer": "ROM"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "71",
+        "date": "2010년 2회",
+        "question": "할당, 링킹, 번역, 재배치 중 로더(Loader)의 기능이 아닌 것은?",
+        "question_desc": "번역(compiler)은 컴파일러라는 별도의 프로그램에서 수행합니다.",
+        "correct_answer": "번역"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "72",
+        "date": "2010년 2회",
+        "question": "하나 이상의 기본 테이블로부터 유도되어 만들어 지는 가상의 테이블은?",
+        "question_desc": "뷰(View)는 가상의 테이블입니다.",
+        "correct_answer": "뷰"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "73",
+        "date": "2010년 2회",
+        "question": "지정된 디렉토리를 포함한 하위 디렉토리와 모든 파일들을 복사하는 외부 명령어는?",
+        "question_desc": "지정된 디렉토리를 포함한 하위 디렉토리와 모든 파일들을 복사하는 외부명령어는 DISKCOPY입니다.",
+        "correct_answer": "DISKCOPY"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "74",
+        "date": "2010년 2회",
+        "question": "MS-DOS 부팅시 필요한 파일의 읽는 순서를 옳게 나열한 것은?<br>(1) MSDOS.SYS<br>(2) IO.SYS<br>(3) CONFIG.SYS<br>(4) AUTOEXET.BAT<br>(5) COMMNAD.COM",
+        "question_desc": "MSDOS부팅시 올바르게 나열한 것은 I M C C A라고 이해하시면 됩니다.",
+        "correct_answer": "(2)-(1)-(3)-(5)-(4)"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "75",
+        "date": "2010년 2회",
+        "question": "인터넷에서 패킷의 경로설정 역할을 주로 하는 것은?",
+        "question_desc": "라우터(router)의 route(노선,경로)가 있으니 연결지어 외우면 편합니다.",
+        "correct_answer": "라우터"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "76",
+        "date": "2010년 2회",
+        "question": "스펙트럼 확산 기술을 응용한 다원 접속 방식으로 보내고자 하는 신호를 그 주파수 대역보다 넓은 주파수 대역으로 확산시켜 전송하는 방식은?",
+        "question_desc": "스펙트럼 확산 기술을 응용한 다원 접속 방식으로 보내고자 하는 신호를 그 주파수 대역보다 넓은 주파수 대역으로 확산시켜 전송하는 방식은 CDMA 입니다.",
+        "correct_answer": "CDMA"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "77",
+        "date": "2010년 2회",
+        "question": "전자, 정전결함 등 전기적 결함에 의하여 서로 다른 회선에 영향을 주는 현상은?",
+        "question_desc": "전자, 정전결함 등 전기적 결함에 의하여 서로 다른 회선에 영향을 주는 현상은 누화입니다.",
+        "correct_answer": "누화"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "78",
+        "date": "2011년 1회",
+        "question": "순차처리(Sequential access)만 가능한 장치는?",
+        "question_desc": "순차처리는 자기 테이프(magnetic tape)입니다.",
+        "correct_answer": "자기 테이프"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "79",
+        "date": "2011년 1회",
+        "question": "CPU와 주기억장치 사이의 속도차이를 해결하기 위한 고속 메모리로 이용되는 것은?",
+        "question_desc": "캐중주 : '캐'시메모리는 '중'앙처리장치와(CPU) '주'기억장치 사이, <br>캐시(SRAM) 램이기 때문에 RAM의 특성을 가지고 있으면서 D램과 다르게 속도가 빨라 보완하는 장치로 쓰입니다.",
+        "correct_answer": "캐시메모리"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "80",
+        "date": "2011년 1회",
+        "question": "2진수로 부여된 주소 값이 직접 기억장치의 피연산자가 위치한 곳을 지정하는 주소 지정 방식은?",
+        "question_desc": "직접주소지정(Direct Addressing) : 지정된 주소가 피연산자의 위치한곳(주소)을 직접 지정하는 방식입니다.",
+        "correct_answer": "직접주소지정"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "81",
+        "date": "2011년 1회",
+        "question": "특정 값을 여러 자리인 2진수로 변환하거나 특정장치로부터 보내오는 신호를 여러 개의 2진 신호로 바꾸어 변환시키는 장치는?",
+        "question_desc": "인코더 : 10진수(특정진수)를 2진수로 변환, 암호화 기능<br>디코더 : 2진 신호를 10진(특정진수)으로 변환, 해독기능",
+        "correct_answer": "인코더"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "82",
+        "date": "2011년 1회",
+        "question": "PC내의 레지스터 중 연산 결과에 따라 자리올림이나 오버플로가 발생했는지 여부와 외부로 부터의 인터럽트 신호까지 나타내는 것은?",
+        "question_desc": "상태 레지스터 : CPU상태 저장",
+        "correct_answer": "상태 레지스터"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "83",
+        "date": "2011년 1회",
+        "question": "컴퓨터 내에서 실행되는 명령어와 데이터가 이동되는 통로를 일컫는 것은?",
+        "question_desc": "버스(Bus) : 컴퓨터에서 모든 데이터가 이동하는 통로 (제어버스 : 제어신호가 이동, 데이터 버스 : 데이터가 이동)",
+        "correct_answer": "버스"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "84",
+        "date": "2011년 1회",
+        "question": "스프레드시트에서 기본 입력 단위는?",
+        "question_desc": "스프레드시트의 기본 단위 : 셀<br>프리젠테이션의 화면 단위 : 슬라이드",
+        "correct_answer": "셀"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "85",
+        "date": "2011년 1회",
+        "question": "데이터베이스 3단계 스키마의 종류는?",
+        "question_desc": "외부 스키마 : 서브스키마<br>개념 스키마 : 논리적 스키마<br>내부 스키마 : 물리적 스키마",
+        "correct_answer": "외부스키마, 내부스키마, 개념스키마"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "86",
+        "date": "2011년 1회",
+        "question": "스프레드시트에서 조건을 부여하는 이에 맞는 자료들만 추출하여 표시하는 것을 무엇이라 하는가?",
+        "question_desc": "필터 : 조건에 맞는 자료만 검색하여 보는 방법",
+        "correct_answer": "필터"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "87",
+        "date": "2011년 1회",
+        "question": "도스(MS-DOS)에서 하드디스크(HDD)의 영역을 논리적으로 설정하고 사용 가능하도록 분할하는 명령어는?",
+        "question_desc": "FDISK : 파티션 분할 명령어(파티션 디스크의 약자)",
+        "correct_answer": "FDISK"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "88",
+        "date": "2011년 1회",
+        "question": "시스템 프로그램을 디스크로부터 주기억장치로 읽어 내어 컴퓨터를 이용할 수 있는 상태로 만들어 주는 과정은?",
+        "question_desc": "부팅 : 컴퓨터에 전원을 공급하여 컴퓨터를 사용할수 있는 상태로 만드는 작업",
+        "correct_answer": "부팅"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "89",
+        "date": "2011년 1회",
+        "question": "도스(MS-DOS)에서 ATTRIB 명령 사용 시, 읽기 전용 속성을 해제할 때 사용하는 옵션은?",
+        "question_desc": "attrib : +(속성부여), -(속성해제)<br>R : 읽기 전용 속성",
+        "correct_answer": "-R"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "90",
+        "date": "2011년 1회",
+        "question": "비동기 변복조기에서 주로 널리 이용되는 변조방법은?",
+        "question_desc": "비동기식 전송 특징 : 스타트비트, 스톱비트, 2000bps 이하, FSK방식, 한문자 단위, 저속 전송",
+        "correct_answer": "주파수편이변조(FSK)"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "91",
+        "date": "2011년 5회",
+        "question": "명령어 형식(instruction format)에서 첫 번째 바이트에 기억되는 것은?",
+        "question_desc": "명령어의 구성명령어 코드부 + 주소부 (한글),<br> OP-code + Operand (영문)",
+        "correct_answer": "opcode"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "92",
+        "date": "2011년 5회",
+        "question": "기억 장치 고유의 번지로서 0, 1, 2, 3, ...과 같이 16진수로 약속하여 순서대로 정해 놓은 번지는?",
+        "question_desc": "절대번지는 처음부터 순서대로 0, 1, 2, 3 과같이 주소를 부여 하는 방식입니다.",
+        "correct_answer": "절대번지"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "93",
+        "date": "2011년 5회",
+        "question": "1개의 입력선으로 들어오는 정보를 2n개의 출력선 중 1개를 선택하여 출력하는 회로는?",
+        "question_desc": "디멀티플렉서는 1개의 입력선으로 들어오는 정보를 2^n개의 출력선 중 1개를 선택하여 출력하는 회로이다.",
+        "correct_answer": "디멀티플렉서"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "94",
+        "date": "2011년 5회",
+        "question": "인터넷에 연결되어 있는 수많은 컴퓨터의 주소는 일정한 규칙에 따라 지어진다. 210.103.4.1과 같이 4개의 필드로 끊어서, (.)으로 분리하여 나타내는 컴퓨터 주소는?",
+        "question_desc": "컴퓨터의 주소를 IP주소라고 하며 .(점)으로 구분하는 방식은 IPv4 방식입니다.",
+        "correct_answer": "IP주소"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "95",
+        "date": "2011년 5회",
+        "question": "프리젠테이션에서 프리젠테이션의 흐름을 기획한 것을 무엇이라 하는가?",
+        "question_desc": "시나리오 : 흐름을 기획한 것",
+        "correct_answer": "시나리오"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "96",
+        "date": "2011년 5회",
+        "question": "도스(MS-DOS)에서 파일을 저장하고, 보관하는 것은?",
+        "question_desc": "디렉터리(Directory)와 폴더는 같은 뜻입니다.",
+        "correct_answer": "디렉터리"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "97",
+        "date": "2011년 5회",
+        "question": "두 개의 파일의 차이가 있을 때 차이점이 나타난 바이트 위치와 행 번호를 표시하는 UNIX 명령어는?",
+        "question_desc": "cmp : 두개의 파일이 어떤 부분이 다른가를 비교할 때에 사용하는 파일 비교 유틸리티 단순히 같은가 다른가를 확인 할 수있으며 몇행의 몇번째 문자가 다른지 확인 가능<br>diff : 두 개의 파일 간 차이에 대한 정보를 출력하는 파일 비교 유틸리티 cmp 보다 직관적이고 명확하게 비교<br>comm : 일반적이고 뚜렷한 문자열들을 위해서 두 개의 파일을 비교하는 유틸리티<br>paste : 1개이상의 파일에서 행을 합치는 명령어",
+        "correct_answer": "cmp"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "98",
+        "date": "2011년 5회",
+        "question": "실행중인 프로그램이나 시스템을 중지시킬 수 있는 수행중단기능(break on)을 설정할 수 있는 도스 파일은?",
+        "question_desc": "io.sys : 입출력 관련 기능을 담당하는 핵심파일(커널)<br>command.com : 명령어 해석기<br>config.sys : 장치 및 기타 설정 파일<br>autoexec.bat : 부팅후 자동실행 파일",
+        "correct_answer": "config.sys"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "99",
+        "date": "2011년 5회",
+        "question": "컴퓨터를 이용하여 기존의 문자나 숫자 정보뿐만 아니라 텍스트, 이미지, 오디오, 비디오 등 여러 가지 미디어 형태의 정보를 통합하여 처리하는 기술을 무엇이라고 하는가?",
+        "question_desc": "멀티미디어 : 다중 매체라는 뜻으로 여러가지 매채를 말합니다.<br>기존의 문자나 숫자 정보뿐만 아니라 텍스트, 이미지, 오디오, 비디오 등이 있습니다.",
+        "correct_answer": "멀티미디어기술"
+    },
+    {
+        "subject": "정보처리기능사",
+        "num": "100",
+        "date": "2011년 5회",
+        "question": "다음 중 데이터의 암호화와 압축을 수행하는 OSI 참조 모델의 계층은?",
+        "question_desc": "제1계층 물리계층--물리적 절차 규정<br>제2계층 데이터 링크 계층--정보 전송 오류제어<br>제3계층 네트워크 계층--정보교환 중계기능 경로 선정 유통제어<br>제4계층 전송계층--논리적 안정 균등한 서비스 제공<br>제5계층 세션계층--연결접속 동기제어<br>제6계층 표현계층--형식설정 부호 교환 암호해독 압축<br>제7계층 응용계층--응용프로세스간의 정보교환 및 전자 사서함 파일 전송",
+        "correct_answer": "표현계층"
+    }
 ]

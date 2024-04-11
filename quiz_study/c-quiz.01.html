@@ -4,62 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>c-quiz.01</title>
-
+    <title>퀴즈</title>
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="assets/css/quiz_study.css">
 </head>
 
 <body>
     <header id="header">
-        <h1>
-            <a href="index.html">Quiz</a>
-        </h1>
+        <h1><a href="c-quiz.01.html">Quiz</a></h1>
         <nav>
             <ul>
-                <li class="active"><a href="quiz01.html">1</a></li>
+                <li class="active"><a href="c-quiz.01.html">1</a></li>
             </ul>
         </nav>
     </header>
-    <!-- //header -->
-
     <main id="main">
-        <div class="quiz__wrap">
-            <div class="quiz">
-                <div class="quiz__header">
-                    <span class="date"></span>
-                    <span class="type"></span>
-                </div>
-                <!-- //quiz__header -->
-
-                <div class="quiz__main">
-                    <div class="question">
-                        <em></em>.
-                        <span></span>
-                    </div>
-                    <div class="input">
-                        <input type="text" placeholder="정답을 입력해주세요!">
-                    </div>
-                    <div class="answer none"></div>
-                    <div class="desc none"></div>
-                </div>
-                <!-- //quiz__main -->
-
-                <div class="quiz__footer">
-                    <button class="confirm">정답 확인하기</button>
-                </div>
-                <!-- //quiz__footer -->
-            </div>
-        </div>
+        <div class="quiz__wrap"></div>
     </main>
-    <!-- //main -->
-
     <footer id="footer">
         <a href="mailto:wownd456@naver.com">wownd456@naver.com</a>
     </footer>
-    <!-- //footer -->
-
     <script>
+        let currentQuizIndex = 0;
+        let quizInfo = [];
 
+        const fetchQuiz = async () => {
+            try {
+                const response = await fetch("https://hwanginji.github.io/class2024/json/gineungsaJC2005_02.json");
+                const items = await response.json();
+                quizInfo = items.map(item => ({
+                    date: "2005년 2회",
+                    type: item.subject,
+                    question: item.question,
+                    desc: item.desc,
+                    answer: item.correct_answer
+                }));
+                updateQuiz();
+            } catch (error) {
+                console.error('Fetch Error:', error);
+            }
+        };
+
+        const updateQuiz = () => {
+            const quizWrap = document.querySelector(".quiz__wrap");
+            const quiz = quizInfo[currentQuizIndex];
+            const quizHtml = `
+                <div class="quiz">
+                    <div class="quiz__header">${quiz.date} ${quiz.type}</div>
+                    <div class="quiz__main">
+                        <div class="question">${currentQuizIndex + 1}. ${quiz.question}</div>
+                        <input type="text" class="user-answer" placeholder="정답을 입력해주세요!">
+                        <div class="answer none">${quiz.answer}</div>
+                        <div class="desc none">${quiz.desc}</div>
+                    </div>
+                    <div class="quiz__footer">
+                        <button class="confirm">정답 확인하기</button>
+                        <button class="next none">다음 문제</button>
+                    </div>
+                </div>
+            `;
+            quizWrap.innerHTML = quizHtml;
+
+            const confirmButton = document.querySelector(".confirm");
+            const nextButton = document.querySelector(".next");
+
+            confirmButton.addEventListener("click", checkAnswer);
+            nextButton.addEventListener("click", nextQuiz);
+        };
+
+        const checkAnswer = () => {
+            const quizElement = document.querySelector(".quiz"); // 수정된 부분
+            const userAnswer = quizElement.querySelector(".user-answer").value.trim().toLowerCase();
+            const correctAnswer = quizInfo[currentQuizIndex].answer.trim().toLowerCase();
+            const answerElement = quizElement.querySelector(".answer");
+            const descElement = quizElement.querySelector(".desc");
+
+            if (userAnswer === correctAnswer) {
+                quizElement.classList.add("good");
+            } else {
+                quizElement.classList.add("bad");
+                answerElement.classList.remove("none");
+            }
+
+            descElement.classList.remove("none");
+            quizElement.querySelector(".confirm").classList.add("none");
+            quizElement.querySelector(".next").classList.remove("none");
+        };
+
+        const nextQuiz = () => {
+            currentQuizIndex++;
+            const quizElements = document.querySelectorAll(".quiz"); // 수정된 부분
+            if (currentQuizIndex >= quizInfo.length) {
+                const correctQuizElements = document.querySelectorAll(".quiz.good");
+                const incorrectQuizElements = document.querySelectorAll(".quiz.bad");
+                const correctCount = correctQuizElements.length;
+                const incorrectCount = incorrectQuizElements.length;
+                const totalQuestions = quizElements.length;
+                const averageScore = (correctCount / totalQuestions) * 100;
+                alert(`당신의 평균 점수는 ${averageScore.toFixed(2)}점입니다. 맞은 문제 수: ${correctCount}/${totalQuestions}, 틀린 문제 수: ${incorrectCount}`);
+                return;
+            }
+            updateQuiz();
+        };
+
+        // 페이지가 로드된 후 실행
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchQuiz();
+        });
     </script>
+</body>
 
 </html>
