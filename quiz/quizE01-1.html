@@ -43,10 +43,10 @@
 
         const fetchQuiz = async () => {
             try {
-                const response = await fetch("https://hwanginji.github.io/class2024/json/gineungsaJC2024_01.json");
+                const response = await fetch("https://hwanginji.github.io/class2024/quiz/assets/json/gineungsa.json");
                 const items = await response.json();
                 quizInfo = items.map(item => ({
-                    type: item.subject,
+                    type: item.time,
                     question: item.question,
                     desc: item.question_desc,
                     answer: item.correct_answer
