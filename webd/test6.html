@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-1</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 1200px;
+            height: 700px;
+            /* 블록구조 & 가운데 정렬 */
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 1200px;
+            display: flex;
+        }
+
+        #header .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #ffe0f3;
+        }
+
+        #header .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #ffd2ee;
+        }
+
+        #slider {
+            width: 1200px;
+            height: 300px;
+            background-color: #fdb6e2;
+            position: relative;
+        }
+
+        #sliderWrap .slider {
+            width: 100%;
+            height: 300px;
+        }
+
+        #sliderWrap .slider img {
+            left: 0;
+            top: 0;
+            width: 100%;
+            position: absolute;
+        }
+
+        #sliderWrap .slider span {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #000;
+            position: absolute;
+        }
+
+        #contents {
+            width: 1200px;
+            display: flex;
+        }
+
+        #contents .content1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #ff8fd4;
+        }
+
+        #contents .content2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #fa68c2;
+        }
+
+        #contents .content3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #f543b1;
+        }
+
+        #footer {
+            width: 1200px;
+            display: flex;
+        }
+
+        #footer .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #ca5ca0;
+        }
+
+        #footer .footer2 {
+            width: 60%;
+            height: 100px;
+            background-color: #c53d91;
+        }
+
+        #footer .footer3 {
+            width: 20%;
+            height: 100px;
+            background-color: #b31c79;
+        }
+
+        /* nav */
+        .nav {
+            z-index: 1000;
+        }
+
+        .nav>ul {
+            justify-content: right;
+            margin-top: 59px;
+            display: flex;
+        }
+
+        .nav>ul>li {
+            list-style: none;
+        }
+
+        .nav>ul>li>a {
+            text-decoration: none;
+            padding: 10px 50px;
+            background-color: #ccc;
+            display: inline-block;
+            color: #000;
+        }
+
+        .nav>ul>li>a:hover {
+            background-color: #ddd;
+        }
+
+        .nav>ul>li>ul {
+            display: none;
+        }
+
+        .nav>ul>li>ul>li {
+            list-style: none;
+            text-align: center;
+        }
+
+        .nav>ul>li>ul>li>a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: #ccc;
+            color: #000;
+            width: 100%;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        .nav>ul>li>ul>li>a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo"></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">MENU1</a>
+                        <ul>
+                            <li><a href="#">SUBMENU 1-1</a></li>
+                            <li><a href="#">SUBMENU 1-2</a></li>
+                            <li><a href="#">SUBMENU 1-3</a></li>
+                            <li><a href="#">SUBMENU 1-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MENU2</a>
+                        <ul>
+                            <li><a href="#">SUBMENU 2-1</a></li>
+                            <li><a href="#">SUBMENU 2-2</a></li>
+                            <li><a href="#">SUBMENU 2-3</a></li>
+                            <li><a href="#">SUBMENU 2-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MENU3</a>
+                        <ul>
+                            <li><a href="#">SUBMENU 3-1</a></li>
+                            <li><a href="#">SUBMENU 3-2</a></li>
+                            <li><a href="#">SUBMENU 3-3</a></li>
+                            <li><a href="#">SUBMENU 3-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MENU4</a>
+                        <ul>
+                            <li><a href="#">SUBMENU 4-1</a></li>
+                            <li><a href="#">SUBMENU 4-2</a></li>
+                            <li><a href="#">SUBMENU 4-3</a></li>
+                            <li><a href="#">SUBMENU 4-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MENU5</a>
+                        <ul>
+                            <li><a href="#">SUBMENU 5-1</a></li>
+                            <li><a href="#">SUBMENU 5-2</a></li>
+                            <li><a href="#">SUBMENU 5-3</a></li>
+                            <li><a href="#">SUBMENU 5-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //header -->
+
+        <div id="slider">
+            <div id="sliderWrap">
+                <div class="slider s1">
+                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider01.jpg" alt="이미지1">
+                    <span>이미지1</span>
+                </div>
+                <div class="slider s2">
+                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider02.jpg" alt="이미지2">
+                    <span>이미지2</span>
+                </div>
+                <div class="slider s3">
+                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider03.jpg" alt="이미지3">
+                    <span>이미지3</span>
+                </div>
+            </div>
+        </div>
+        <!-- //slider -->
+
+        <div id="contents">
+            <div class="content1"></div>
+            <div class="content2"></div>
+            <div class="content3"></div>
+        </div>
+        <!-- //contents -->
+
+        <div id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </div>
+        <!-- footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            let currentIndex = 0;
+
+            setInterval(() => {
+                let nextIndex = (currentIndex + 1) % 3;
+
+                $(".slider").eq(currentIndex).fadeOut(1000);
+                $(".slider").eq(nextIndex).fadeIn(1000);
+
+                currentIndex = nextIndex;
+            }, 3000);
+        });
+    </script>
+    <script>
+        $(function () {
+            $(".nav>ul>li").mouseover(function () {
+                $(".nav>ul>li>ul").stop().fadeIn(900);
+            });
+            $(".nav>ul>li").mouseout(function () {
+                $(".nav>ul>li>ul").stop().fadeOut(400);
+            });
+        })
+    </script>
+</body>
+
+</html>

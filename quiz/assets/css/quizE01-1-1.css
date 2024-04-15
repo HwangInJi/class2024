@@ -198,28 +198,27 @@ a {
 
 .quiz__play {
     width: 50vw;
-    min-height: 37vh;
+    height: 52vh;
     border: 10px solid #fff;
     background-color: #102938;
     border-radius: 10px;
     position: relative;
     padding: 24px;
     word-wrap: break-word;
-    /* 글자가 영역을 벗어날 경우 줄 바꿈 */
     overflow-wrap: break-word;
-    /* 위의 속성과 같은 역할을 하는 속성입니다. */
+    bottom: 185px;
 }
 
 .quiz__play::before {
     content: '정답';
     position: absolute;
-    left: 13px;
-    top: -80px;
+    left: -99px;
+    top: 39px;
     font-family: "bitbit";
     color: #ca5f69;
     font-size: 74px;
     text-shadow: 5px 5px 0px #fff;
-    transform: rotate(0deg);
+    transform: rotate(-90deg);
     text-transform: uppercase;
 }
 
@@ -396,10 +395,10 @@ a {
 }
 
 /* quiz__answer */
-.quiz__answer {
+.quiz__play .quiz__answer {
     position: relative;
     width: 50vw;
-    min-height: 37vh;
+    min-height: 33vh;
     border: 10px solid #fff;
     background-color: #102938;
     border-radius: 10px;
@@ -407,22 +406,23 @@ a {
     margin-top: 90px;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    left: -34px;
 }
 
-.quiz__answer::after {
+.quiz__play .quiz__answer::after {
     content: '해설';
     position: absolute;
-    right: 27px;
-    bottom: calc(100% + -2px);
+    right: -98px;
+    bottom: calc(100% + -107px);
     font-family: "bitbit";
     color: #6496bd;
     font-size: 74px;
     text-shadow: 5px 5px 0px #fff;
-    transform: rotate(0deg);
+    transform: rotate(90deg);
     text-transform: uppercase;
 }
 
-.quiz__answer .answer {
+.quiz__play .quiz__answer .answer {
     border: 3px solid #ca5f69;
     padding: 20px;
     background-color: #fbdfe2;
@@ -433,11 +433,11 @@ a {
     margin-bottom: 10px;
 }
 
-.quiz__answer .answer::before {
+.quiz__play .quiz__answer .answer::before {
     content: '📌정답 : ';
 }
 
-.quiz__answer .desc {
+.quiz__play .quiz__answer .desc {
     border: 3px solid #6496bd;
     padding: 20px;
     background-color: #e3f1fc;
@@ -448,9 +448,10 @@ a {
     margin-bottom: 10px;
 }
 
-.quiz__answer .desc::before {
+.quiz__play .quiz__answer .desc::before {
     content: '💡설명 : ';
 }
+
 
 /* 미디어쿼리 */
 @media (max-width: 800px) {
