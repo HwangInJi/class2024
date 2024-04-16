@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test7</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 1200px;
+            height: 700px;
+            /* 블록구조 & 가운데 정렬 */
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 1200px;
+            display: flex;
+        }
+
+        #header .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #ffe0f3;
+        }
+
+        #header .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #ffd2ee;
+        }
+
+        #slider {
+            width: 1200px;
+            height: 300px;
+            background-color: #fdb6e2;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider__wrap {
+            display: flex;
+        }
+
+        .slider__wrap .slider {
+            position: relative;
+        }
+
+        .slider__wrap .slider img {
+            vertical-align: top;
+        }
+
+        .slider__wrap .slider span {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            position: absolute;
+            background-color: #fff;
+        }
+
+        #contents {
+            width: 1200px;
+            display: flex;
+        }
+
+        #contents .content1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #ff8fd4;
+        }
+
+        #contents .content2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #fa68c2;
+        }
+
+        #contents .content3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #f543b1;
+        }
+
+        #footer {
+            width: 1200px;
+            display: flex;
+        }
+
+        #footer .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #ca5ca0;
+        }
+
+        #footer .footer2 {
+            width: 60%;
+            height: 100px;
+            background-color: #c53d91;
+        }
+
+        #footer .footer3 {
+            width: 20%;
+            height: 100px;
+            background-color: #b31c79;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo"></div>
+            <div class="nav"></div>
+        </div>
+        <!-- //header -->
+
+        <div id="slider">
+            <div class="slider__wrap">
+                <div class="slider s1">
+                    <img src="img/Frame 38.jpg" alt="이미지1">
+                    <span>이미지1</span>
+                </div>
+                <div class="slider s2">
+                    <img src="img/Frame 39.jpg" alt="이미지1">
+                    <span>이미지2</span>
+                </div>
+                <div class="slider s3">
+                    <img src="img/Frame 40.jpg" alt="이미지1">
+                    <span>이미지3</span>
+                </div>
+            </div>
+        </div>
+        <!-- //slider -->
+
+        <div id="contents">
+            <div class="content1"></div>
+            <div class="content2"></div>
+            <div class="content3"></div>
+        </div>
+        <!-- //contents -->
+
+        <div id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </div>
+        <!-- footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        let currentIndex = 0;
+
+        $(".slider__wrap").append($(".slider").first().clone(true));
+
+        setInterval(() => {
+            currentIndex++;
+            $(".slider__wrap").animate({ marginLeft: -currentIndex * 100 + "%" }, 600);
+
+            if (currentIndex == 3) {
+                setTimeout(() => {
+                    $(".slider__wrap").animate({ marginLeft: 0 }, 0);
+                    currentIndex = 0;
+                }, 700);
+            };
+        }, 3000);
+    </script>
+</body>
+
+</html>
