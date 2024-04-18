@@ -5,38 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>정보처리기능사 주관식100</title>
+
     <link rel="stylesheet" href="assets/css/quizE01-1.css">
-
-    <style>
-        .quiz__footer .answer,
-        .quiz__footer .desc {
-            display: none;
-        }
-
-        .quiz__answer {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
-    <div id="quiz__wrap" class="quiz__wrap">
-        <!-- quiz__play 시작 -->
-        <div class="quiz__play">
-            <span class="number">1/100</span>
-            <div class="quiz"></div>
-            <div class="quiz__footer">
-                <button class="confirm">정답 확인</button>
-                <button class="next none">다음 문제</button>
+    <div id="quiz__wrap">
+        <div class="quiz__start none">
+            <div class="title">
+                <span>2023.01.20.FRI</span>
+            </div>
+            <div class="text">
+                <span><i>100문제</i> <strong>주관식</strong> 실기 기출문제</span>
+                <h1>정보처리기능사<br>실기주관식</h1>
+                <ul>
+                    <li>정보처리기능사 실기 단답형 '100문제'입니다.</li>
+                    <li>통과 점수는 '90점'이며, 시간 제한은 '30분'입니다.</li>
+                </ul>
+            </div>
+            <div class="btn">
+                <button>시작하기</button>
             </div>
         </div>
-        <!-- quiz__play 끝 -->
-        <div class="quiz__answer"></div>
+        <!-- //quiz__start -->
+
+        <div class="quiz__play">
+            <div class="quiz__main"></div>
+        </div>
+        <div class="quiz__finish">
+            <a href="indexE01.html">▶ 메인화면</a>
+        </div>
         <div class="quiz__bg">
             <svg id="canvas"></svg>
         </div>
     </div>
-
     <script>
         let currentQuizIndex = 0;
         let quizInfo = [];
@@ -46,7 +48,7 @@
                 const response = await fetch("https://hwanginji.github.io/class2024/quiz/assets/json/gineungsa01.json");
                 const items = await response.json();
                 quizInfo = items.map(item => ({
-                    type: item.time,
+                    date: item.time,
                     question: item.question,
                     desc: item.question_desc,
                     answer: item.correct_answer
@@ -58,18 +60,23 @@
         };
 
         const updateQuiz = () => {
-            const quizWrap = document.querySelector(".quiz");
+            const quizWrap = document.querySelector(".quiz__main");
             const quiz = quizInfo[currentQuizIndex];
             const quizHtml = `
-                <div class="quiz">
-                    <div class="quiz__header">${quiz.type}</div>
-                    <div class="quiz__main">
-                        <div class="question">${' ' + quiz.question}</div>
-                        <input type="text" class="user-answer" placeholder="정답을 입력해주세요!">
-                        <div class="answer none">${quiz.answer}</div>
-                        <div class="desc none">${quiz.desc}</div>
-                    </div>
+            <div class="quiz">
+                <div class="quiz__header">${quiz.date}</div>
+                <div class="quiz__cont">
+                    <span class="number">${currentQuizIndex + 1}/${quizInfo.length}</span>
+                    <div class="question">${quiz.question}</div>
+                    <input type="text" class="user-answer" placeholder="정답을 입력해주세요!">
+                    <div class="answer none">${quiz.answer}</div>
+                    <div class="desc none">${quiz.desc}</div>
                 </div>
+                <div class="quiz__footer">
+                    <button class="confirm">정답 확인하기</button>
+                    <button class="next none">다음 문제</button>
+                </div>
+            </div>
             `;
             quizWrap.innerHTML = quizHtml;
 
@@ -100,45 +107,32 @@
             }
 
             descElement.classList.remove("none");
-            const nextButton = document.querySelector(".next");
-            nextButton.classList.remove("none");
+            quizElement.querySelector(".confirm").classList.add("none"); // 'confirm' 버튼 사라지도록 수정
+            quizElement.querySelector(".next").classList.remove("none"); // 'next' 버튼 나타나도록 수정
 
-            // 정답과 설명을 quiz__answer에 추가
-            const quizAnswer = document.querySelector(".quiz__answer");
-            quizAnswer.innerHTML = `
-                <div class="answer">${quizInfo[currentQuizIndex].answer}</div>
-                <div class="desc">${quizInfo[currentQuizIndex].desc}</div>
-            `;
-            quizAnswer.style.display = "block"; // quiz__answer 보이기
-        };
+            // 정답과 설명 출력
+            answerElement.textContent = `정답: ${quizInfo[currentQuizIndex].answer}`;
+            descElement.textContent = `설명: ${quizInfo[currentQuizIndex].desc}`;
 
-        const nextQuiz = () => {
-            const nextButton = document.querySelector(".next");
-            nextButton.classList.add("none");
+            // 입력창 숨기기
+            const inputElement = quizElement.querySelector(".user-answer");
+            inputElement.style.display = "none";
 
-            const quizElement = document.querySelector(".quiz");
-            quizElement.classList.remove("good");
-            quizElement.classList.remove("bad");
-
-            // quiz__answer 초기화
-            const quizAnswer = document.querySelector(".quiz__answer");
-            quizAnswer.innerHTML = "";
-            quizAnswer.style.display = "none"; // quiz__answer 숨기기
-
-            currentQuizIndex++;
-            if (currentQuizIndex >= quizInfo.length) {
+            if (currentQuizIndex + 1 === quizInfo.length) {
                 const totalQuestions = correctCount + incorrectCount;
                 const averageScore = (correctCount / totalQuestions) * 100;
                 alert(`당신의 평균 점수는 ${averageScore.toFixed(2)}점입니다.\n\n맞은 문제 수: ${correctCount}/${totalQuestions}\n틀린 문제 수: ${incorrectCount}`);
+            }
+        };
+
+        const nextQuiz = () => {
+            currentQuizIndex++;
+            if (currentQuizIndex >= quizInfo.length) {
                 return;
             }
             updateQuiz();
-
-            // 문제 번호 증가
-            const numberElement = document.querySelector(".number");
-            numberElement.textContent = `${currentQuizIndex + 1}/${quizInfo.length}`;
         };
-
+        // 페이지가 로드된 후 실행
         document.addEventListener("DOMContentLoaded", () => {
             fetchQuiz();
         });

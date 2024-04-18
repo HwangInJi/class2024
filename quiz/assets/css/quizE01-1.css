@@ -52,8 +52,7 @@
     padding: 0;
     font-family: "bitbit";
     box-sizing: border-box;
-    font-size: 23px;
-    color: #ffffff;
+    font-size: 16px;
 }
 
 li {
@@ -62,7 +61,8 @@ li {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
+    font-size: 30px;
 }
 
 /* common */
@@ -77,12 +77,12 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 8px solid #102938;
+    border: 8px solid #262457;
 }
 
 #quiz__wrap::before {
     content: "";
-    border: 8px solid #102938;
+    border: 8px solid #262457;
     width: calc(100% - 16px);
     height: calc(100% - 16px);
     position: absolute;
@@ -176,6 +176,230 @@ a {
     cursor: pointer;
 }
 
+/* quiz__main */
+.quiz__main {
+    width: 50vw;
+    min-height: 50vh;
+    border: 10px solid #fff;
+    background-color: #1f1d3a;
+    border-radius: 10px;
+    position: relative;
+    padding: 24px;
+    flex-wrap: wrap;
+}
+
+.quiz__main::before {
+    content: '기능사';
+    position: absolute;
+    left: -105px;
+    top: 50px;
+    font-family: "bitbit";
+    color: #e4d03c;
+    font-size: 60px;
+    text-shadow: 5px 5px 0px #fff;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+}
+
+.quiz__main::after {
+    content: '퀴즈';
+    position: absolute;
+    right: -82px;
+    bottom: 32px;
+    font-family: "bitbit";
+    color: #35db93;
+    font-size: 60px;
+    text-shadow: 5px 5px 0px #fff;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+}
+
+.quiz__main .number {
+    position: relative;
+    right: 34px;
+    top: -100px;
+    background-color: rgb(31, 29, 58);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 5px;
+    font-size: 30px;
+    padding: 10px 30px;
+    border: 10px solid rgb(255, 255, 255);
+}
+
+.quiz__main .question {
+    font-family: "bitbit";
+    color: #fff;
+    line-height: 1.3;
+    font-size: 24px;
+    margin-top: -25px;
+}
+
+.quiz__main .question::before {
+    content: 'Q.';
+    font-size: 40px;
+    color: #e4d03c;
+    font-weight: bold;
+}
+
+.user-answer {
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    border: 0;
+    text-align: center;
+    font-size: 50px;
+    background-color: #fff;
+    color: #262457a1;
+    margin-top: 20px;
+}
+
+.quiz__main .answer input::placeholder {
+    color: #262457a1;
+}
+
+.quiz__main .confirm {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.quiz__main .confirm button {
+    font-size: 20px;
+    padding: 10px 20px;
+    font-family: "GmarketSans";
+    border-radius: 50px;
+    border: 0;
+    background-color: #3926a8;
+    color: #fff;
+    border: 4px solid #fff;
+}
+
+.quiz__header {
+    font-family: "bitbit";
+    color: #e4d03c;
+    line-height: 1.3;
+    font-size: 20px;
+}
+
+.quiz__main .answer {
+    border: 1px solid #ca5f69;
+    padding: 20px;
+    background-color: #ca5f69;
+    border-radius: 20px;
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.quiz__main .answer::before {
+    content: '📌 ';
+}
+
+.quiz__main .desc {
+    border: 1px solid #6496bd;
+    padding: 20px;
+    background-color: #6496bd;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.quiz__main .desc::before {
+    content: '💡 ';
+}
+
+.quiz__footer {}
+
+.quiz__footer .confirm {
+    background-color: #6496bd;
+    color: #ede8dd;
+    width: 100%;
+    padding: 20px;
+    bottom: 0;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    margin-top: 40px;
+}
+
+.quiz__footer .confirm:hover {
+    background-color: transparent;
+    border: 1px dashed #ede8dd;
+    color: #6496bd;
+    cursor: pointer;
+}
+
+.quiz__footer .next {
+    background-color: #ede8dd;
+    color: #ca5f69;
+    width: 100%;
+    padding: 20px;
+    bottom: 0;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    margin-top: 5%;
+}
+
+.quiz__footer .next:hover {
+    background-color: transparent;
+    border: 1px dashed #ede8dd;
+    color: #ca5f69;
+    cursor: pointer;
+}
+
+/* good, bad */
+.quiz__main .quiz.good {
+    position: relative;
+}
+
+.quiz__main .quiz.good::before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    border: 10px solid #35db93;
+    border-radius: 50%;
+    position: absolute;
+    left: -11px;
+    top: -13px;
+    z-index: 100;
+}
+
+.quiz__main .quiz.bad {
+    position: relative;
+}
+
+.quiz__main .quiz.bad::before {
+    content: '';
+    width: 150px;
+    height: 10px;
+    background-color: #35db93;
+    position: absolute;
+    left: -30px;
+    top: 40px;
+    border-radius: 30px;
+    transform: rotate(45deg);
+    z-index: 100;
+}
+
+.quiz__main .quiz.bad::after {
+    content: '';
+    width: 150px;
+    height: 10px;
+    background-color: #35db93;
+    position: absolute;
+    left: -30px;
+    top: 40px;
+    border-radius: 30px;
+    transform: rotate(-45deg);
+    z-index: 100;
+}
+
 /* quiz__bg */
 .quiz__bg {
     width: 100%;
@@ -193,263 +417,7 @@ a {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #b4d7c8;
-}
-
-.quiz__play {
-    width: 50vw;
-    min-height: 37vh;
-    border: 10px solid #fff;
-    background-color: #102938;
-    border-radius: 10px;
-    position: relative;
-    padding: 24px;
-    word-wrap: break-word;
-    /* 글자가 영역을 벗어날 경우 줄 바꿈 */
-    overflow-wrap: break-word;
-    /* 위의 속성과 같은 역할을 하는 속성입니다. */
-}
-
-.quiz__play::before {
-    content: '정답';
-    position: absolute;
-    left: 13px;
-    top: -80px;
-    font-family: "bitbit";
-    color: #ca5f69;
-    font-size: 74px;
-    text-shadow: 5px 5px 0px #fff;
-    transform: rotate(0deg);
-    text-transform: uppercase;
-}
-
-.quiz__play .number {
-    position: absolute;
-    right: -8.5px;
-    top: -72px;
-    background-color: #102938;
-    color: #ede8dd;
-    text-align: center;
-    border-radius: 5px;
-    font-size: 30px;
-    padding: 10px 30px;
-    border: 10px solid #fff;
-    text-transform: uppercase;
-}
-
-.quiz__play .question {
-    font-family: "bitbit";
-    color: #fff;
-    line-height: 1.3;
-    font-size: 27px;
-}
-
-.quiz__play .question::before {
-    content: 'Q.';
-    font-size: 40px;
-    color: #e4d03c;
-    font-weight: bold;
-}
-
-.quiz__play .answer {
-    margin-top: 30px;
-
-}
-
-/* footer */
-.quiz__footer {}
-
-.quiz__footer .confirm {
-    background-color: #ca5f69;
-    color: #fff;
-    width: 100%;
-    margin-top: 6%;
-    padding: 20px;
-    bottom: 0;
-    font-size: 20px;
-    border-radius: 20px;
-    border: 3px solid transparent;
-    transition: all 0.3s;
-}
-
-.quiz__footer .confirm:hover {
-    background-color: transparent;
-    border: 3px dashed #ca5f69;
-    color: #fff;
-    cursor: pointer;
-}
-
-.quiz__footer .next {
-    background-color: #6496bd;
-    color: #fff;
-    width: 100%;
-    padding: 20px;
-    bottom: 0;
-    font-size: 20px;
-    border-radius: 20px;
-    border: 3px solid transparent;
-    transition: all 0.3s;
-    margin-top: 8px;
-}
-
-.quiz__footer .next:hover {
-    background-color: transparent;
-    border: 3px dashed #6496bd;
-    color: #fff;
-    cursor: pointer;
-}
-
-/* good, bad */
-.quiz__wrap .quiz.good {
-    position: relative;
-}
-
-.quiz__wrap .quiz.good::before {
-    content: '';
-    width: 100px;
-    height: 100px;
-    border: 13px solid #e4ff00;
-    border-radius: 50%;
-    position: absolute;
-    left: -2px;
-    top: -16px;
-    z-index: 100;
-}
-
-.quiz__wrap .quiz.bad {
-    position: relative;
-}
-
-.quiz__wrap .quiz.bad::before {
-    content: '';
-    width: 150px;
-    height: 13px;
-    background-color: #e4ff00;
-    position: absolute;
-    left: -30px;
-    top: 30px;
-    border-radius: 30px;
-    transform: rotate(45deg);
-    z-index: 100;
-}
-
-.quiz__wrap .quiz.bad::after {
-    content: '';
-    width: 150px;
-    height: 13px;
-    background-color: #e4ff00;
-    position: absolute;
-    left: -30px;
-    top: 30px;
-    border-radius: 30px;
-    transform: rotate(-45deg);
-    z-index: 100;
-}
-
-.quiz__check {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 100px;
-    height: 100px;
-    line-height: 94px;
-    text-align: center;
-    background-color: #bd5ed7;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 50%;
-    border: 5px solid #f7e0fa;
-    transition: all 0.3s;
-}
-
-.quiz__check:hover {
-    border: 5px dashed #f7e0fa;
-    background-color: #bd5ed7;
-    color: #59646e;
-}
-
-.user-answer {
-    width: 100%;
-    height: 100px;
-    border-radius: 20px;
-    border: 0;
-    text-align: center;
-    font-size: 50px;
-    background-color: #fff;
-    color: #262457a1;
-    margin-top: 20px;
-}
-
-.quiz__main .answer::placeholder {
-    color: #262457a1;
-}
-
-.quiz__main .input input {
-    width: 100%;
-    padding: 20px;
-    border: 1px solid #bd5ed7;
-    border-radius: 3px;
-    font-size: 16px;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-/* quiz__answer */
-.quiz__answer {
-    position: relative;
-    width: 50vw;
-    min-height: 37vh;
-    border: 10px solid #fff;
-    background-color: #102938;
-    border-radius: 10px;
-    padding: 24px;
-    margin-top: 90px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-.quiz__answer::after {
-    content: '해설';
-    position: absolute;
-    right: 27px;
-    bottom: calc(100% + -2px);
-    font-family: "bitbit";
-    color: #6496bd;
-    font-size: 74px;
-    text-shadow: 5px 5px 0px #fff;
-    transform: rotate(0deg);
-    text-transform: uppercase;
-}
-
-.quiz__answer .answer {
-    border: 3px solid #ca5f69;
-    padding: 20px;
-    background-color: #fbdfe2;
-    border-radius: 20px;
-    font-size: 23px;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-.quiz__answer .answer::before {
-    content: '📌정답 : ';
-}
-
-.quiz__answer .desc {
-    border: 3px solid #6496bd;
-    padding: 20px;
-    background-color: #e3f1fc;
-    border-radius: 20px;
-    font-size: 20px;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-.quiz__answer .desc::before {
-    content: '💡설명 : ';
+    background-color: #1f1d3a;
 }
 
 /* 미디어쿼리 */
