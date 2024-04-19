@@ -177,21 +177,6 @@
             }, 3000);
         });
     </script>
-
-    <script>
-        $(function () {
-            const tabBtn = $(".notice .title > ul > li");
-            const tabCont = $(".notice .cont > div");
-
-            tabCont.hide().eq(0).show;
-            tabBtn.click(function () {
-                const index = $(this).index();
-
-                $(this).addClass("active").siblings().removeClass("active");
-                tabCont.eq(index).show().siblings().hide();
-            });
-        });
-    </script>
 </body>
 
 </html>

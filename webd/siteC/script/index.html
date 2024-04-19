@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남도맛기행 축제</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1 class="logo">로고</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">협회소개</a>
+                        <ul>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">명인</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">행사안내</a>
+                        <ul>
+                            <li><a href="#">요리경연대회</a></li>
+                            <li><a href="#">전시참가</a></li>
+                            <li><a href="#">참가신청</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">홍보마당</a>
+                        <ul>
+                            <li><a href="#">축제소식</a></li>
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">레시피</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">회원마당</a>
+                        <ul>
+                            <li><a href="#">Q&A</a></li>
+                            <li><a href="#">사진갤러리</a></li>
+                            <li><a href="#">공지사항</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="main">
+            <article class="main">
+                <div class="slider s1">
+                    <img src="../images/slider01.jpg" alt="이미지1">
+                </div>
+                <div class="slider s2">
+                    <img src="../images/slider02.jpg" alt="이미지2">
+                </div>
+                <div class="slider s3">
+                    <img src="../images/slider03.jpg" alt="이미지3">
+                </div>
+            </article>
+            <section class="contents">
+                <div class="notice">공지사항</div>
+                <div class="gallery">갤러리</div>
+                <div class="banner">배너</div>
+            </section>
+            <footer class="footer">
+                <div class="footer1">로고</div>
+                <div class="footer2">
+                    <div class="footer2-1">하단메뉴</div>
+                    <div class="footer2-2">카피</div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("nav>ul>li").mouseover(function () {
+                $(this).find(">ul").stop().fadeIn(900);
+            });
+            $("nav>ul>li").mouseout(function () {
+                $(this).find(">ul").stop().fadeOut(400);
+            });
+
+            let currentIndex = 0;
+            $(".main").append($(".slider").first().clone(true));
+
+            setInterval(() => {
+                currentIndex++;
+                $(".main").animate({ marginLeft: -currentIndex * 100 + "%" }, 600);
+
+                if (currentIndex == 3) {
+                    setTimeout(() => {
+                        $(".main").animate({ marginLeft: 0 }, 0);
+                        currentIndex = 0;
+                    }, 700);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>
