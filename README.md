@@ -8,6 +8,8 @@
 ## 퀴즈 게임   
 [퀴즈게임 01](https://hwanginji.github.io/class2024/quiz/index.html)   
 
+[퀴즈게임 02](https://hwanginji.github.io/class2024/quiz/indexE01.html)   
+
 [퀴즈 01](https://hwanginji.github.io/class2024/quiz/quiz01.html)   
 - 변수
 - 선택자(querySelector)
