@@ -6,7 +6,7 @@
 [MySQL](https://hwanginji.github.io/class2024/mysql/index.html)   
 
 ## 퀴즈 게임   
-[퀴즈게임](https://hwanginji.github.io/class2024/quiz/index.html)   
+[퀴즈게임 01](https://hwanginji.github.io/class2024/quiz/index.html)   
 
 [퀴즈 01](https://hwanginji.github.io/class2024/quiz/quiz01.html)   
 - 변수
