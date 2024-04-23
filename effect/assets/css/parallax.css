@@ -19,6 +19,10 @@ body {
     background-color: #BFCABD;
 }
 
+body.bg2 {
+    background-color: #add5df;
+}
+
 /* header */
 #header {
     position: fixed;
@@ -68,4 +72,36 @@ body {
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
+}
+
+.footer__inner nav {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    font-family: "Saira Semi Condensed", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.footer__inner nav ul {
+    display: flex;
+}
+
+.footer__inner nav li a {
+    margin-right: 5px;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.footer__inner nav li.active a {
+    text-emphasis: circle;
+    /* 그 외 
+    text-emphasis: filled;
+    text-emphasis: open;
+    text-emphasis: dot;
+    text-emphasis: double-circle;
+    text-emphasis: triangle;
+    text-emphasis: sesame; */
 }
