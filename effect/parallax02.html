@@ -95,6 +95,54 @@
             height: 100px;
             border-radius: 50%;
         }
+
+        #section09 .text {
+            font-size: 5vw;
+            font-family: "hallym";
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            width: 100%;
+            text-align: center;
+            background-color: #add5df;
+            position: absolute;
+
+        }
+
+        /* #section09 .circle {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+
+        #section09 .circle:nth-child(2) {
+            background-color: rgb(76, 160, 128);
+        }
+
+        #section09 .circle:nth-child(3) {
+            background-color: rgb(235, 159, 72);
+        }
+
+        #section09 .circle:nth-child(4) {
+            background-color: rgb(74, 182, 233);
+        }
+
+        #section09 .circle:nth-child(5) {
+            background-color: rgb(248, 89, 195);
+        }
+
+        #section09 .circle:nth-child(6) {
+            background-color: rgb(236, 107, 102);
+        }
+
+        #section09 .circle:nth-child(7) {
+            background-color: rgb(78, 42, 161);
+        }
+
+        #section09 .circle:nth-child(8) {
+            background-color: rgb(204, 228, 97);
+        } */
     </style>
 </head>
 
@@ -188,7 +236,15 @@
 
                 <section id="section09">
                     <span class="num">09</span>
-                    <div class="img"></div>
+                    <div class="text t1">진짜로</div>
+                    <div class="text t2">어렵다</div>
+                    <div class="circle c1"></div>
+                    <div class="circle c2"></div>
+                    <div class="circle c3"></div>
+                    <div class="circle c4"></div>
+                    <div class="circle c5"></div>
+                    <div class="circle c6"></div>
+                    <div class="circle c7"></div>
                 </section>
                 <!-- //section09 -->
             </div>
@@ -377,6 +433,34 @@
         });
 
         // 09 : 숙제 (위의 예시 이용해서 만들기)
+        const ani9 = gsap.timeline();
+
+        ani9.from("#section09 .t1", { autoAlpha: 0, duration: 1, y: 50 }, "+=1")
+            .from("#section09 .t2", { autoAlpha: 0, duration: 1, y: 50 }, "+=1")
+            .to("#section09 .text", { autoAlpha: 0, duration: 1, delay: 0 })
+        // .to("#section09 .circle", {
+        //     y: -100,
+        //     autoAlpha: 0,
+        //     borderRadius: 200,
+        //     scale: 0.5,
+        //     ease: "power4.out",
+        //     // stagger: 0.1
+        //     stagger: {
+        //         amount: 3,
+        //         from: "random"
+        //     }
+        // })
+
+        ScrollTrigger.create({
+            animation: ani9,
+            trigger: "#section09",
+            start: "top top",
+            end: "+=1000",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers: true
+        });
     </script>
 </body>
 
