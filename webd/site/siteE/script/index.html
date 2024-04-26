@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-2</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <aside id="header">
+            <h1 class="logo">
+                <p>역사박물관</p>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">박물관 소개</a>
+                        <ul>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">박물관연혁</a></li>
+                            <li><a href="#">유물현황</a></li>
+                            <li><a href="#">관람안내</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">전시</a>
+                        <ul>
+                            <li><a href="#">선사시대</a></li>
+                            <li><a href="#">삼국시대</a></li>
+                            <li><a href="#">조선시대</a></li>
+                            <li><a href="#">근대시대</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">연구</a>
+                        <ul>
+                            <li><a href="#">생활유적</a></li>
+                            <li><a href="#">분묘유적</a></li>
+                            <li><a href="#">생산유적</a></li>
+                            <li><a href="#">통신유적</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">교육</a>
+                        <ul>
+                            <li><a href="#">문화행사</a></li>
+                            <li><a href="#">진로체험</a></li>
+                            <li><a href="#">외부교육</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="main">
+            <section class="notice">
+                <h2>공지사항</h2>
+                <ul>
+                    <li><a href="#">박물관 영업 시간 변경 안내</a><span>24.05.02</span></li>
+                    <li><a href="#">문화 행사 안내</a><span>24.05.02</span></li>
+                    <li><a href="#">체험학습 신청 기간 연장 안내</a><span>24.05.02</span></li>
+                    <li><a href="#">박물관 휴무일</a><span>24.05.02</span></li>
+                </ul>
+            </section>
+            <section class="gallery">
+                <h2>갤러리</h2>
+                <div class="content1">
+                    <img src="../img/gallery01.jpg" alt="갤러리1">
+                    <p>한국의 단청</p>
+                </div>
+                <div class="content2">
+                    <img src="../img/gallery02.jpg" alt="갤러리2">
+                    <p>박물관 쉼터</p>
+                </div>
+            </section>
+            <section class="link"></section>
+        </main>
+
+        <div id="sliders">
+            <div class="slider s1">
+                <!-- <img src="../img/slider01.jpg" alt="이미지1"> -->
+                <p>박물관 문화 체험</p>
+            </div>
+            <div class="slider s1">
+                <!-- <img src="../img/slider02.jpg" alt="이미지2"> -->
+                <p>한국의 역사</p>
+            </div>
+            <div class="slider s1">
+                <!-- <img src="../img/slider03.jpg" alt="이미지3"> -->
+                <p>도서관 이용</p>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="footer1">
+                <img src="../img/logo.jpg" alt="로고">
+            </div>
+            <div class="footer2">
+                <p>홈페이지를 이용해주셔서 감사합니다.</p>
+            </div>
+            <div class="footer3">
+                <select>
+                    <option value="1">박물관 소개</option>
+                    <option value="2">전시관 소개</option>
+                    <option value="3">체험관 소개</option>
+                </select>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".nav>ul>li").mouseover(function () {
+                $(this).find(">ul").stop().fadeIn(900);
+            });
+            $(".nav>ul>li").mouseout(function () {
+                $(this).find(">ul").stop().fadeOut(400);
+            });
+        });
+    </script>
+</body>
+
+</html>
