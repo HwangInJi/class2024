@@ -11,20 +11,22 @@
 ## requests
 
 ````
-    pip3 install requests
+    pip install requests
     : 웹 페이지나 API로부터 데이터를 손쉽게 가져오는 Python 라이브러리
     
-    pip3 install beautifulsoup4
+    pip install beautifulsoup4
     : HTML 및 XML 문서를 구문 분석하여 데이터를 추출하기 위한 파이썬 라이브러리
 
-    pip3 install lxml
+    pip install lxml
     : XML 및 HTML을 처리하기 위한 파이썬 라이브러리로, 파싱 및 문서 조작에 사용됨
 
-    pip3 install pandas
+    pip install pandas
     : 데이터 조작 및 분석을 위한 Python 라이브러리로, 데이터프레임을 다룰 때 유용함
 
-    pip3 install selenium
+    pip install selenium
     : 웹 애플리케이션 테스트 자동화를 위한 도구로, 브라우저를 제어하여 웹 페이지를 자동으로 조작할 수 있게 해줌
+
+    pip install webdriver_manager
 ````
 
 ## 파일 불러오기
