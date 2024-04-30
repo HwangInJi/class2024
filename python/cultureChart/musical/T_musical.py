@@ -12,7 +12,7 @@ from datetime import datetime
 
 # 현재 날짜 가져오기
 current_date = datetime.now().strftime("%Y-%m-%d")
-filename = f"chart_T_concert10_{current_date}.json"
+filename = f"chart_T_musical10_{current_date}.json"
 
 # 웹드라이버 설치
 options = ChromeOptions()
@@ -28,13 +28,13 @@ WebDriverWait(browser, 10).until(
 # "콘서트" 탭 버튼을 찾아서 클릭하기
 try:
     concert_tab_button = WebDriverWait(browser, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//button[text()='콘서트']"))
+        EC.element_to_be_clickable((By.XPATH, "//button[text()='뮤지컬']"))
     )
     concert_tab_button.click()
-    print("Clicked '콘서트' tab.")
+    print("Clicked '뮤지컬' tab.")
     time.sleep(3)  # 페이지가 완전히 로드될 때까지 대기
 except Exception as e:
-    print("Error clicking '콘서트' tab:", e)
+    print("Error clicking '뮤지컬' tab:", e)
 
 # "월간" 탭 버튼을 찾아서 클릭하기
 try:
