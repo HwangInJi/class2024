@@ -49,14 +49,14 @@
     },
     {
         "Rank": "9",
-        "Title": "트바로티 클래식 아레나 투어 2024－창원",
-        "Venue": "창원 실내체육관",
-        "ImageURL": "https://cdnticket.melon.co.kr/resource/image/upload/product/2024/04/20240418135025e1ba8094-e1c9-497b-a83c-9d4873e30888.png"
-    },
-    {
-        "Rank": "10",
         "Title": "트바로티 클래식 아레나 투어 2024－울산",
         "Venue": "울산동천체육관",
         "ImageURL": "https://cdnticket.melon.co.kr/resource/image/upload/product/2024/04/202404111428151da2a4cb-5b0f-4af8-9e5e-411aae5d1653.jpg"
+    },
+    {
+        "Rank": "10",
+        "Title": "트바로티 클래식 아레나 투어 2024－창원",
+        "Venue": "창원 실내체육관",
+        "ImageURL": "https://cdnticket.melon.co.kr/resource/image/upload/product/2024/04/20240418135025e1ba8094-e1c9-497b-a83c-9d4873e30888.png"
     }
 ]
