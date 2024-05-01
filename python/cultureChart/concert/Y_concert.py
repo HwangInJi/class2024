@@ -1,4 +1,3 @@
-import json
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options as ChromeOptions
@@ -8,6 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import time
+import json
 from datetime import datetime
 
 # 현재 날짜 가져오기
@@ -18,31 +18,33 @@ filename = f"chart_Y_concert10_{current_date}.json"
 options = ChromeOptions()
 service = ChromeService(executable_path=ChromeDriverManager().install())
 browser = webdriver.Chrome(service=service, options=options)
+
+# 웹 사이트 접속
 browser.get("http://ticket.yes24.com/Rank/All")
+time.sleep(2)  # 페이지 로딩 대기
 
-# rank-division 클래스를 가진 div 요소를 찾기
-search_box = browser.find_element(By.CLASS_NAME, "rank-division")
-# div 내에서 모든 a 태그 요소를 찾기
-a_tags = search_box.find_elements(By.TAG_NAME, "a")
-# 두 번째 a 태그의 소스를 가져오기
-second_a_tag = a_tags[1]
-second_a_tag.click()
+# 콘서트 카테고리로 이동
+concert_link = WebDriverWait(browser, 10).until(
+    EC.presence_of_element_located((By.XPATH, "//a[contains(@href, '/New/Rank/Ranking.aspx?genre=15456')]"))
+)
+concert_link.click()
+time.sleep(2)  # 콘서트 페이지 로딩 대기
+
 # 월간 카테고리 선택
-monthly_category = browser.find_element(By.XPATH, '//a[@categoryid="3"]')
+monthly_category = WebDriverWait(browser, 10).until(
+    EC.presence_of_element_located((By.XPATH, "//a[contains(@categoryid, '3') and contains(text(), '월간')]"))
+)
 monthly_category.click()
+time.sleep(2)  # 월간 카테고리 로딩 대기
 
-time.sleep(3)
-# 대기
-WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'rank-division')))
-# 새로운 페이지 소스 가져오기
+# 웹 페이지 소스 가져오기
 page_source = browser.page_source
-# BeautifulSoup을 사용하여 페이지 소스 파싱
 soup = BeautifulSoup(page_source, 'html.parser')
 
-# 원하는 데이터 추출 및 처리
+# 정보 추출
 concerts_data = []
 
-# Extracting data from rank-best div
+# 1-3위 콘서트 데이터 추출
 rank_best_div = soup.find('div', class_='rank-best')
 if rank_best_div:
     concert_divs = rank_best_div.find_all('div')
@@ -56,7 +58,30 @@ if rank_best_div:
             concert_info['rank'] = concert_link.find('p', class_='rank-best-number').find('span').get_text(strip=True)
             concerts_data.append(concert_info)
 
-# Saving the extracted data to a JSON file
+# 4-10위 콘서트 순위 정보 추출
+rank_list = soup.find_all('div', class_='rank-list')[0]  # 첫번째 rank-list 컨테이너 선택
+items = rank_list.find_all('div', recursive=False)[:7]  # 4위부터 10위까지의 항목 추출
+for item in items:
+    concert_info = {}
+    title_link = item.find('p', class_='rank-list-tit').find('a')
+    image = item.find('img', class_='rank-list-img')
+    date_location = item.find_all('p')[-1]
+    fluctuation_div = item.find('div', class_='fluctuation')  # 순위 정보를 포함하는 div 태그를 찾는다.
+
+    # 순위 정보를 추출
+    if fluctuation_div:
+        rank_span = fluctuation_div.find('p').find('span')  # 첫 번째 <p> 태그 내의 <span>에서 순위를 찾는다.
+        rank = rank_span.text.strip() if rank_span else 'No rank provided'
+    else:
+        rank = 'No rank provided'
+
+    concert_info['title'] = title_link.text.strip() if title_link else 'No title provided'
+    concert_info['image_url'] = image['src'] if image else 'No image provided'
+    concert_info['date_and_location'] = date_location.get_text(strip=True) if date_location else 'No date and location provided'
+    concert_info['rank'] = rank
+    concerts_data.append(concert_info)
+
+# 결과를 JSON 파일로 저장
 with open(filename, 'w', encoding='utf-8') as file:
     json.dump(concerts_data, file, ensure_ascii=False, indent=4)
 
