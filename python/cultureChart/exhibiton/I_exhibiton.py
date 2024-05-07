@@ -17,6 +17,7 @@ filename = f"chart_I_exhibiton10_{current_date}.json"
 # 웹드라이버 설정
 options = ChromeOptions()
 service = ChromeService(executable_path=ChromeDriverManager().install())
+# options.add_argument("--start-fullscreen")
 browser = webdriver.Chrome(service=service, options=options)
 browser.get("https://tickets.interpark.com/contents/ranking")
 
