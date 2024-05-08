@@ -12,20 +12,16 @@ from datetime import datetime
 
 # 현재 날짜 가져오기
 current_date = datetime.now().strftime("%Y-%m-%d")
-filename = f"concert/pychart_I_concert10{current_date}.json"
-
-# WebDriverManager로 ChromeDriver 설치 및 설정
-webdriver_manager = ChromeDriverManager()
-webdriver_manager.install()
-webdriver_path = webdriver_manager.driver
+filename = f"chart_I_concert10_{current_date}.json"
 
 # 웹드라이버 설정
 options = ChromeOptions()
-# options.add_argument("--headless")
-options.add_argument("--start-fullscreen") # 풀스크린으로 chrome 실행.
 service = ChromeService(executable_path=ChromeDriverManager().install())
 browser = webdriver.Chrome(service=service, options=options)
 browser.get("https://tickets.interpark.com/contents/ranking")
+
+# RadioButton_wrap__761f0 클래스를 가진 div 요소를 찾기
+search_box = browser.find_element(By.CLASS_NAME, "RadioButton_wrap__761f0")
 
 # "콘서트" 탭 버튼을 찾아서 클릭하기
 try:
@@ -54,8 +50,6 @@ ranking_container = soup.find('div', class_='responsive-ranking-list_rankingList
 
 concerts = []
 
-testList = browser.find_elements(By.CLASS_NAME , "responsive-ranking-list_rankingItem__PuQPJ")
-
 # 1-3위 데이터 추출
 for ranking_item in ranking_container.find_all('div', class_='responsive-ranking-list_rankingItem__PuQPJ'):
     rank = ranking_item.find('div', class_='RankingBadge_badgeNumber__84aeb').text.strip()
@@ -72,7 +66,7 @@ for ranking_item in ranking_container.find_all('div', class_='responsive-ranking
     concerts.append(concert_data)
 
 # 4-10위 콘서트 순위 정보 추출
-rank_list_4_to_10 = soup.find_all('div', class_='responsive-ranking-list_rankingItem__PuQPJ')[3:10]
+rank_list_4_to_10 = soup.find_all('div', class_='responsive-ranking-list_rankingItem__PuQPJ')[3:10]  # 4위부터 10위까지의 항목 추출
 for ranking_item in rank_list_4_to_10:
     rank = ranking_item.find('div', class_='RankingBadge_badgeNumberColor__d45a0').text.strip()
     concert_name = ranking_item.find('li', class_='responsive-ranking-list_goodsName__aHHGY').text.strip()
@@ -88,8 +82,8 @@ for ranking_item in rank_list_4_to_10:
     concerts.append(concert_data)
 
 # json파일로 저장
-# with open(filename, 'w', encoding='utf-8') as file:
-#     json.dump(concerts, file, ensure_ascii=False, indent=4)
+with open(filename, 'w', encoding='utf-8') as file:
+    json.dump(concerts, file, ensure_ascii=False, indent=4)
 
 # 출력
 for concert_data in concerts:
