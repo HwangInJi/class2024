@@ -147,46 +147,184 @@
                                         <li>음수인 경우 문자열의 오른쪽에서부터 인덱스를 센다.</li>
                                 </ul>
                                 <pre class="javascript"><code>{
-    "javascript reference".at()       //j
-    "javascript reference".at(0)      //j
-    "javascript reference".at(1)      //a
-    "javascript reference".at(2)      //v
-    "javascript reference".at(3)      //a
-    "javascript reference".at(4)      //s
-    "javascript reference".at(5)      //c
-    "javascript reference".at(-1)     //e
-    "javascript reference".at(-2)     //c
-    "javascript reference".at(-3)     //n
-    "javascript reference".at(-4)     //e
-    "javascript reference".at(-5)     //r
-    "javascript reference".at(100)    // undefined
+        "javascript reference".at()       //j
+        "javascript reference".at(0)      //j
+        "javascript reference".at(1)      //a
+        "javascript reference".at(2)      //v
+        "javascript reference".at(3)      //a
+        "javascript reference".at(4)      //s
+        "javascript reference".at(5)      //c
+        "javascript reference".at(-1)     //e
+        "javascript reference".at(-2)     //c
+        "javascript reference".at(-3)     //n
+        "javascript reference".at(-4)     //e
+        "javascript reference".at(-5)     //r
+        "javascript reference".at(100)    // undefined
 }</code></pre>
                         </div>
 
                         <div id="sample02" class="sample">
-                                <h3>02. includes()</h3>
-                                <p class="notice">"문자열".at(위치값)</p>
-
+                                <h3>💛02. includes()</h3>
+                                <p class="notice">includes()</p>
                                 <ul>
-                                        <li>지정한 숫자(index)를 받아, 문자열에 해당되는 인덱스의 요소를 반환한다.</li>
-                                        <li>대소문자를 구별한다.</li>
-                                        <li>문자열의 길이보다 큰 인덱스를 지정하면 undefined를 반환한다.</li>
-                                        <li>음수인 경우 문자열의 오른쪽에서부터 인덱스를 센다.</li>
+                                        <li>
+                                                includes()는 배열(Array)이 특정 요소를 포함하고 있는지 여부를 확인하는 JavaScript의
+                                                배열 메서드로<br />
+                                                대상 배열에 특정 요소가 포함되어 있으면 true를 반환하고, 그렇지 않으면 false를 반환합니다.
+                                        </li>
                                 </ul>
                                 <pre class="javascript"><code>{
-    "javascript reference".at()       //j
-    "javascript reference".at(0)      //j
-    "javascript reference".at(1)      //a
-    "javascript reference".at(2)      //v
-    "javascript reference".at(3)      //a
-    "javascript reference".at(4)      //s
-    "javascript reference".at(5)      //c
-    "javascript reference".at(-1)     //e
-    "javascript reference".at(-2)     //c
-    "javascript reference".at(-3)     //n
-    "javascript reference".at(-4)     //e
-    "javascript reference".at(-5)     //r
-    "javascript reference".at(100)    // undefined
+        const fruits = ['apple', 'banana', 'orange', 'grape'];
+
+        console.log(fruits.includes('banana')); // true
+        console.log(fruits.includes('watermelon')); // false
+}</code></pre>
+                        </div>
+
+                        <div id="sample03" class="sample">
+                                <h3>💛03. indexOf()</h3>
+                                <p class="notice">indexOf()</p>
+                                <ul>
+                                        <li>
+                                                indexOf()는 문자열이나 배열에서 특정 요소의 인덱스를 찾는 JavaScript의 메서드로<br />
+                                                만약 해당 요소를 찾을 수 없으면 -1을 반환합니다.
+                                        </li>
+                                </ul>
+                                <pre class="javascript"><code>{
+        const fruits = ['apple', 'banana', 'orange', 'grape'];
+
+        console.log(fruits.indexOf('banana')); // 1
+        console.log(fruits.indexOf('watermelon')); // -1
+}</code></pre>
+                        </div>
+
+                        <div id="sample04" class="sample">
+                                <h3>💛04. match()</h3>
+                                <p class="notice">match()</p>
+                                <ul>
+                                        <li>
+                                                match()는 문자열에서 정규 표현식과 일치하는 부분을 찾아 반환하는 JavaScript의 문자열 메서드로<br />
+                                                이 메서드를 사용하면 문자열 내에서 패턴에 해당하는 부분을 쉽게 추출하거나 확인할 수 있습니다.
+                                        </li>
+                                </ul>
+                                <pre class="javascript"><code>{
+        const text = 'Today is a sunny day.';
+        const matched = text.match(/sunny/);
+        
+        console.log(matched); // ["sunny"]
+}</code></pre>
+                        </div>
+
+                        <div id="sample05" class="sample">
+                                <h3>💛05. replace()</h3>
+                                <p class="notice">replace()</p>
+                                <ul>
+                                        <li>
+                                                replace()는 문자열에서 지정된 패턴을 다른 문자열로 치환하는 JavaScript의 문자열 메서드로<br />
+                                                이 메서드를 사용하면 특정 문자열을 다른 문자열로 바꿀 수 있습니다.
+                                        </li>
+                                </ul>
+                                <pre class="javascript"><code>{
+        const text = 'I have an apple.';
+        const newText = text.replace('apple', 'orange');
+
+        console.log(newText); // "I have an orange."
+}</code></pre>
+                        </div>
+
+                        <div id="sample06" class="sample">
+                                <h3>💛06. search()</h3>
+                                <p class="notice">search()</p>
+                                <ul>
+                                        <li>
+                                                search()는 문자열에서 특정 패턴이나 문자열을 검색하여 해당 패턴이나 문자열이 위치한 인덱스를 반환하는 JavaScript의
+                                                문자열 메서드로<br />
+                                                이 메서드를 사용하면 문자열 내에서 원하는 문자열을 찾을 수 있습니다.
+                                        </li>
+                                </ul>
+                                <pre class="javascript"><code>{
+        const text = 'I have an apple.';
+
+        const index = text.search('apple');
+        console.log(index); // apple에서 a가 시작되는 인덱스값이 10이기 때문에 10으로 반환
+}</code></pre>
+                        </div>
+
+                        <div id="sample07" class="sample">
+                                <h3>💛💛07. slice()</h3>
+                                <p class="notice">slice()</p>
+                                <ul>
+                                        <li>
+                                                slice()는 배열이나 문자열에서 지정한 시작 인덱스부터 끝 인덱스까지의 부분을 추출하여 새로운 배열이나 문자열을 반환하는
+                                                JavaScript의 메서드로<br />
+                                                이 메서드를 사용하면 기존 배열이나 문자열의 일부분을 쉽게 추출할 수 있습니다.
+                                        </li>
+                                </ul>
+                                <pre class="javascript"><code>{
+        const text = 'Hello, world!';
+
+        const slicedText = text.slice(7, 12); // slice()는 !같은 부호를 문자열로 인식O
+        console.log(slicedText); // 문자열에서 인덱스 7부터 12까지의 부분을 추출하여 반환하기 때문에 "world!"가 나옴
+}</code></pre>
+                        </div>
+
+                        <div id="sample08" class="sample">
+                                <h3>💛08. substring()</h3>
+                                <p class="notice">substring()</p>
+                                <ul>
+                                        <li>
+                                                substring() 메서드는 문자열에서 지정된 인덱스 사이의 부분 문자열을 추출하여 반환하는 JavaScript의 문자열
+                                                메서드로<br />
+                                                slice() 메서드와 유사하지만 차이점이 있습니다.
+                                        </li>
+                                        <li>
+                                                만약 substring() 메서드의 인자로 전달하는 두 개의 매개변수가 있다면 각각은 시작 인덱스와 종료 인덱스를
+                                                뜻합니다.<br />
+                                                이 때, 종료 인덱스는 추출된 문자열에 포함되지 않고 만약 종료 인덱스를 생략하면 시작 인덱스부터 문자열의 끝까지 추출됩니다.
+                                        </li>
+                                </ul>
+                                <pre class="javascript"><code>{
+        const text = 'Hello, world!';
+
+        const subText1 = text.substring(7, 12); // substring()는 !같은 부호를 문자열로 인식X
+        console.log(subText1); // "world"
+        
+        const subText2 = text.substring(7);
+        console.log(subText2); // "world"
+}</code></pre>
+                        </div>
+
+                        <div id="sample09" class="sample">
+                                <h3>💛💛💛09. split()</h3>
+                                <p class="notice">split()</p>
+                                <ul>
+                                        <li>
+                                                split()는 문자열을 지정된 구분자를 기준으로 나누어 배열로 반환하는 JavaScript의 문자열 메서드로<br />
+                                                이 메서드를 사용하면 문자열을 특정 패턴이나 문자로 분할할 수 있습니다.
+                                        </li>
+                                </ul>
+                                <pre class="javascript"><code>{
+        const text = 'Hello, world! How are you?';
+
+        const words = text.split(' ');
+        console.log(words); // ["Hello,", "world!", "How", "are", "you?"]
+}</code></pre>
+                        </div>
+
+                        <div id="sample10" class="sample">
+                                <h3>💛10. trim()</h3>
+                                <p class="notice">trim()</p>
+                                <ul>
+                                        <li>
+                                                trim()은 문자열의 양 끝에서 공백을 제거하여 반환하는 JavaScript의 문자열 메서드로<br />
+                                                주로 문자열에서 사용자 입력의 공백을 제거하거나 문자열을 비교할 때 사용됩니다.
+                                        </li>
+                                </ul>
+                                <pre class="javascript"><code>{
+        const text = '   Hello, world!   ';
+
+        const trimmedText = text.trim();
+        console.log(trimmedText); // "Hello, world!"
 }</code></pre>
                         </div>
                         <!-- //main__sample-->
