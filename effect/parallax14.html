@@ -283,52 +283,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
     <script>
         // 01
-        gsap.to("#section1 .parallax__item__img", {
-            duration: 2,
-            x: 500,
-            rotation: 360,
-            borderRadius: 100
+        gsap.to("#section1 .parallax__item__imgWrap", {
+            rotation: -360, // 360도 회전
+            duration: 2, // 2초 동안 애니메이션 실행
+            ease: "power2.inOut", // 애니메이션 이징 설정
+            repeat: -1, // 무한 반복
+            transformOrigin: "center center" // 회전 중심점 설정
         });
 
         // 02
-        const ani2 = gsap.timeline();
+        const image2 = gsap.utils.toArray("#section2 .parallax__item__imgWrap");
 
-        ani2.to("#section2 .parallax__item__img", { rotation: 720, scale: 0, borderRadius: 200 })
-            .to("#section2 .parallax__item__img", { rotation: 0, scale: 1, borderRadius: 20 });
-
-        ScrollTrigger.create({
-            animation: ani2,
-            trigger: "#section2",
-            start: "top top",
-            end: "+=2000",
-            scrub: true,
-            pin: true,
-            anticpatePin: 1,
-            markers: false
+        image2.forEach((img) => {
+            gsap.to(img, {
+                scale: 4,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: img,
+                    start: "top right",
+                    end: "+=2000",
+                    scrub: true,
+                    markers: true
+                }
+            });
         });
 
         // 03
-        // const ani3 = gsap.timeline();
-
-        // ani3.from("#section3 .parallax__item__img", {
-        //     autoAlpha: 0,
-        //     scale: 5,
-        //     width: "100vw",
-        //     height: "100vh"
-        // });
-
-        // ScrollTrigger.create({
-        //     animation: ani3,
-        //     trigger: "#section3",
-        //     start: "top top",
-        //     end: "+=3000",
-        //     scrub: true,
-        //     pin: true,
-        //     anticpatePin: 1,
-        //     markers: true
-        // });
-
-        // 04
         const horizontal = document.querySelector("#horizontal");
         const sections = gsap.utils.toArray("#horizontal > section");
 
@@ -346,6 +326,15 @@
             }
         });
 
+        gsap.to("#section3 .parallax__item__imgWrap", {
+            rotation: 360,
+            duration: 2,
+            ease: "power2.inOut",
+            repeat: -1,
+            transformOrigin: "center center"
+        });
+
+        // 04
         gsap.to(".img4", {
             y: -200,
             duration: 2,
@@ -361,7 +350,49 @@
         });
 
         // 05
+        gsap.to(".img5", {
+            y: 200,
+            duration: 2,
+            ease: "elastic",
+            scrollTrigger: {
+                trigger: ".img5",
+                containerAnimation: scrollTween,
+                start: "left center",
+                toggleActions: "play none reverse none",
+                markers: true,
+                id: "img5"
+            }
+        });
 
+        // 06
+        gsap.to(".img6", {
+            x: -400,
+            duration: 2,
+            ease: "elastic",
+            scrollTrigger: {
+                trigger: ".img6",
+                containerAnimation: scrollTween,
+                start: "left center",
+                toggleActions: "play none reverse none",
+                markers: true,
+                id: "img6"
+            }
+        });
+
+        // 07
+        gsap.to(".img7", {
+            x: 400,
+            duration: 2,
+            ease: "elastic",
+            scrollTrigger: {
+                trigger: ".img7",
+                containerAnimation: scrollTween,
+                start: "left center",
+                toggleActions: "play none reverse none",
+                markers: true,
+                id: "img7"
+            }
+        });
 
         // 08
         const ani8 = gsap.timeline();
